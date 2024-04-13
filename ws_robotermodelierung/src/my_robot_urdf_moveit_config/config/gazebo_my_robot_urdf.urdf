@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="my_robot_urdf">
+    <link name="world_link" />
+    <joint name="base_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="1.5708 0 0" />
+        <!-- Rotate 90 degrees around the Z-axis -->
+        <parent link="world_link" />
+        <child link="base_link" />
+    </joint>
+    <link name="base_link">
+        <inertial>
+            <origin xyz="-0.05930869488714 0 0.0776653157730273" rpy="0 0 0" />
+            <mass value="33.891578448587" />
+            <inertia ixx="0.562042604088221" ixy="0" ixz="0.00403961419511077" iyy="0.970694427805805" iyz="0" izz="1.29713482615658" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/base_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.152941176470588 0 0.117647058823529 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/base_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="arm_link_1">
+        <inertial>
+            <origin xyz="0.0416589398280025 0 0.19712083516126" rpy="0 0 0" />
+            <mass value="26.7048266497369" />
+            <inertia ixx="0.495499615132855" ixy="-0.0102760504758245" ixz="-0.0600935399650257" iyy="0.766768677077223" iyz="-0.0115358881770517" izz="0.604967931690783" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/arm_link_1.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 0.309803921568627 0.309803921568627 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/arm_link_1.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="arm_joint_1" type="revolute">
+        <origin xyz="0 -0.234 0" rpy="1.5708 0 0" />
+        <parent link="base_link" />
+        <child link="arm_link_1" />
+        <axis xyz="0 0 1" />
+        <limit lower="-3.1416" upper="3.1416" effort="0" velocity="0" />
+    </joint>
+    <link name="arm_link_2">
+        <inertial>
+            <origin xyz="0.000258724363916829 0.0707589768311214 -0.290203503422467" rpy="0 0 0" />
+            <mass value="14.3270690802686" />
+            <inertia ixx="0.848873613210201" ixy="-0.000175299197197552" ixz="4.64678003354567E-05" iyy="0.87480377814942" iyz="0.0137202067906075" izz="0.0504590836189902" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/arm_link_2.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/arm_link_2.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="arm_joint_2" type="revolute">
+        <origin xyz="0.15 -0.1375 0.265" rpy="0 -1.5708 3.1416" />
+        <parent link="arm_link_1" />
+        <child link="arm_link_2" />
+        <axis xyz="0 1 0" />
+        <limit lower="-3.1416" upper="3.1416" effort="0" velocity="0" />
+    </joint>
+    <link name="arm_link_3">
+        <inertial>
+            <origin xyz="0.0362614171159604 -0.123132908024542 -0.0664637155357432" rpy="0 0 0" />
+            <mass value="27.1450417424437" />
+            <inertia ixx="0.344868303293538" ixy="-0.00338242702861573" ixz="0.0211648441841247" iyy="0.473964503565446" iyz="-0.00675660536457725" izz="0.420912669748457" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/arm_link_3.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/arm_link_3.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="arm_joint_3" type="continuous">
+        <origin xyz="0 0 -0.7" rpy="0 0 0" />
+        <parent link="arm_link_2" />
+        <child link="arm_link_3" />
+        <axis xyz="0 1 0" />
+        <limit lower="-3.1416" upper="3.1416" effort="0" velocity="0" />
+    </joint>
+    <link name="arm_link_4">
+        <inertial>
+            <origin xyz="0.338893744219759 0 0" rpy="0 0 0" />
+            <mass value="7.96664349020365" />
+            <inertia ixx="0.0300827685994122" ixy="-3.48765154258439E-07" ixz="-4.33220175841054E-07" iyy="0.215976713293833" iyz="0.000166072999280485" izz="0.223048843574734" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/arm_link_4.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/arm_link_4.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="arm_joint_4" type="revolute">
+        <origin xyz="0.29 -0.11 -0.115" rpy="3.1416 0 0" />
+        <parent link="arm_link_3" />
+        <child link="arm_link_4" />
+        <axis xyz="1 0 0" />
+        <limit lower="-3.1416" upper="3.1416" effort="0" velocity="0" />
+    </joint>
+    <link name="arm_link_5">
+        <inertial>
+            <origin xyz="-0.00224018993807718 0 0" rpy="0 0 0" />
+            <mass value="0.961734748124672" />
+            <inertia ixx="0.00154678090917305" ixy="0" ixz="0" iyy="0.00165625576362529" iyz="0" izz="0.00143991315628678" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/arm_link_5.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/arm_link_5.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="arm_joint_5" type="revolute">
+        <origin xyz="0.51 0 0" rpy="3.1416 1.5708 3.1416" />
+        <parent link="arm_link_4" />
+        <child link="arm_link_5" />
+        <axis xyz="0 1 0" />
+        <limit lower="-4.7124" upper="1.5708" effort="0" velocity="0" />
+    </joint>
+    <link name="arm_link_6">
+        <inertial>
+            <origin xyz="0 0 0.052725963344278" rpy="0 0 0" />
+            <mass value="0.288779624800079" />
+            <inertia ixx="0.000386925186804297" ixy="0" ixz="0" iyy="0.000386925215104185" iyz="0" izz="0.000212753902483572" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/arm_link_6.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/arm_link_6.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="arm_joint_6" type="revolute">
+        <origin xyz="0.045 0 0" rpy="0 1.5708 0" />
+        <parent link="arm_link_5" />
+        <child link="arm_link_6" />
+        <axis xyz="0 0 1" />
+        <limit lower="-3.1416" upper="3.1416" effort="0" velocity="0" />
+    </joint>
+    <link name="eef_link">
+        <inertial>
+            <origin xyz="0 0 -0.0188761945416884" rpy="0 0 0" />
+            <mass value="5.46782575492837" />
+            <inertia ixx="0.0365076087226209" ixy="0" ixz="0" iyy="0.0365076302641158" iyz="0" izz="0.0627860547898383" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/eef_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/eef_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="eef_link_fixed" type="fixed">
+        <origin xyz="0 0 0.145" rpy="3.1416 0 3.1416" />
+        <parent link="arm_link_6" />
+        <child link="eef_link" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="eef_jaw_1">
+        <inertial>
+            <origin xyz="0.0869730343447335 -0.02 0.0799489474646907" rpy="0 0 0" />
+            <mass value="0.672155087926634" />
+            <inertia ixx="0.00170709281582639" ixy="0" ixz="-0.000828153130362926" iyy="0.00264620439405273" iyz="0" izz="0.00111534333500677" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/eef_jaw_1.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/eef_jaw_1.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="eef_jaw_1_joint_fixed" type="fixed">
+        <origin xyz="-0.22228 -0.02 -0.03" rpy="3.1416 0 0" />
+        <parent link="eef_link" />
+        <child link="eef_jaw_1" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="eef_jaw_2">
+        <inertial>
+            <origin xyz="0.0869730343447341 0.02 -0.0799489474646903" rpy="0 0 0" />
+            <mass value="0.672155087926635" />
+            <inertia ixx="0.00170709281582639" ixy="0" ixz="0.000828153130362932" iyy="0.00264620439405273" iyz="0" izz="0.00111534333500678" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/eef_jaw_2.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/eef_jaw_2.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="eef_jaw_2_joint_fixed" type="fixed">
+        <origin xyz="0.22228 0.02 -0.03" rpy="0 0 3.1416" />
+        <parent link="eef_link" />
+        <child link="eef_jaw_2" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="eef_jaw_3">
+        <inertial>
+            <origin xyz="0.0869730343447339 0.0199999999999998 -0.0799489474646904" rpy="0 0 0" />
+            <mass value="0.672155087926635" />
+            <inertia ixx="0.00170709281582639" ixy="1.22228661725192E-18" ixz="0.00082815313036293" iyy="0.00264620439405273" iyz="-2.65326222347392E-18" izz="0.00111534333500678" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/eef_jaw_3.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/eef_jaw_3.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="eef_jaw_3_joint_fixed" type="fixed">
+        <origin xyz="0.02 -0.22228 -0.03" rpy="0 0 1.5708" />
+        <parent link="eef_link" />
+        <child link="eef_jaw_3" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="eef_jaw_4">
+        <inertial>
+            <origin xyz="0.0869730343447339 0.0200000000000002 -0.0799489474646904" rpy="0 0 0" />
+            <mass value="0.672155087926635" />
+            <inertia ixx="0.00170709281582639" ixy="-7.19987309785431E-19" ixz="0.00082815313036293" iyy="0.00264620439405273" iyz="3.18786093986215E-18" izz="0.00111534333500678" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/eef_jaw_4.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/meshes/eef_jaw_4.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="eef_jaw_4_joint_fixed" type="fixed">
+        <origin xyz="-0.0200000000000002 0.222284161474006 -0.0299999999999999" rpy="0 0 -1.5707963267949" />
+        <parent link="eef_link" />
+        <child link="eef_jaw_4" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <transmission name="trans_arm_joint_1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="arm_joint_1">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="arm_joint_1_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_arm_joint_2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="arm_joint_2">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="arm_joint_2_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_arm_joint_3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="arm_joint_3">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="arm_joint_3_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_arm_joint_4">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="arm_joint_4">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="arm_joint_4_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_arm_joint_5">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="arm_joint_5">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="arm_joint_5_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_arm_joint_6">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="arm_joint_6">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="arm_joint_6_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+</robot>
+
