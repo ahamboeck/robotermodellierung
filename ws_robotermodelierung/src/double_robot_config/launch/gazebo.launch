@@ -5,7 +5,7 @@
   <arg name="paused" default="false" doc="Start Gazebo paused"/>
   <arg name="world_name" default="worlds/empty.world" doc="Gazebo world file"/>
   <arg name="world_pose" default="-x 0 -y 0 -z 0 -R 0 -P 0 -Y 0" doc="Pose to spawn the robot at"/>
-  <arg name="initial_joint_positions" default=" -J arm_joint_1 0 -J arm_joint_2 -1.57 -J arm_joint_3 1.57 -J arm_joint_4 0 -J arm_joint_5 1.5708 -J arm_joint_6 0" doc="Initial joint configuration of the robot"/>
+  <arg name="initial_joint_positions" default=" -J left_arm_joint_1 0 -J left_arm_joint_2 -1.508 -J left_arm_joint_3 1.5707 -J left_arm_joint_4 0 -J left_arm_joint_5 1.5707 -J left_arm_joint_6 0" doc="Initial joint configuration of the robot"/>
 
   <!-- Start Gazebo paused to allow the controllers to pickup the initial pose -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch" pass_all_args="true">
@@ -13,7 +13,7 @@
   </include>
 
   <!-- Set the robot urdf on the parameter server -->
-  <param name="robot_description" textfile="$(find my_robot_urdf)/urdf/my_robot_urdf.urdf" />
+  <param name="robot_description" textfile="$(find double_robot_config)/config/gazebo_my_robot.urdf" />
 
   <!-- Unpause the simulation after loading the robot model -->
   <arg name="unpause" value="$(eval '' if arg('paused') else '-unpause')" />
@@ -23,7 +23,7 @@
     respawn="false" output="screen" />
 
   <!-- Load the controller parameters onto the parameter server -->
-  <rosparam file="$(find my_robot_urdf_moveit_config)/config/gazebo_controllers.yaml" />
+  <rosparam file="$(find double_robot_config)/config/gazebo_controllers.yaml" />
   <include file="$(dirname)/ros_controllers.launch"/>
 
   <!-- Spawn the Gazebo ROS controllers -->

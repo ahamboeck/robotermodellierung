@@ -31,7 +31,7 @@
         <joint name="arm_joint_2" value="-1.57"/>
         <joint name="arm_joint_3" value="1.57"/>
         <joint name="arm_joint_4" value="0"/>
-        <joint name="arm_joint_5" value="-1.57"/>
+        <joint name="arm_joint_5" value="1.5708"/>
         <joint name="arm_joint_6" value="0"/>
     </group_state>
     <group_state name="ready_to_grip" group="eef">
@@ -44,10 +44,10 @@
     </group_state>
     <group_state name="save_space" group="eef">
         <joint name="arm_joint_1" value="0"/>
-        <joint name="arm_joint_2" value="-0.0704"/>
-        <joint name="arm_joint_3" value="-1.3947"/>
+        <joint name="arm_joint_2" value="-0.1511"/>
+        <joint name="arm_joint_3" value="-1.371"/>
         <joint name="arm_joint_4" value="0"/>
-        <joint name="arm_joint_5" value="-0.9509"/>
+        <joint name="arm_joint_5" value="0.9446"/>
         <joint name="arm_joint_6" value="0"/>
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
