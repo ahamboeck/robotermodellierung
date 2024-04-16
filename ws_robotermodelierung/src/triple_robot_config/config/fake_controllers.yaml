@@ -1,0 +1,47 @@
+controller_list:
+  - name: fake_arm_alex_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - alex_arm_joint_1
+      - alex_arm_joint_2
+      - alex_arm_joint_3
+      - alex_arm_joint_4
+      - alex_arm_joint_5
+      - alex_arm_joint_6
+  - name: fake_yuzi_robot_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - yuzi_joint_link_1_yuzi
+      - yuzi_joint_link_2_yuzi
+      - yuzi_joint_link_3_yuzi
+      - yuzi_joint_link_4_yuzi
+      - yuzi_joint_link_5_yuzi
+      - yuzi_joint_link_6_yuzi
+  - name: fake_coco_robot_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - coco_joint_link_1_coco
+      - coco_joint_link_2_coco
+      - coco_joint_link_3_coco
+      - coco_joint_link_4_coco
+      - coco_joint_link_5_coco
+      - coco_arm_joint_6_coco
+  - name: fake_eef_robot_alex_controller
+    type: $(arg fake_execution_type)
+    joints:
+      []
+  - name: fake_eef_robot_coco_controller
+    type: $(arg fake_execution_type)
+    joints:
+      []
+  - name: fake_eef_robot_yuzi_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - yuzi_joint_link_6_yuzi
+initial:  # Define initial robot poses per group
+  - group: arm_alex
+    pose: straight
+  - group: yuzi_robot
+    pose: home
+  - group: coco_robot
+    pose: home

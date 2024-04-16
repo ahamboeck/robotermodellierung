@@ -2,15 +2,19 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="my_robot">
     <xacro:include filename="$(find my_robot_urdf)/urdf/workbench.xacro" />
     <xacro:include filename="$(find my_robot_urdf)/urdf/arm.xacro" />
+    <xacro:include filename="$(find my_robot_urdf)/urdf/arm_coco.xacro" />
+    <xacro:include filename="$(find my_robot_urdf)/urdf/arm_yuzi.xacro" />
+
+    
     <!-- Define parameters for workbench 1-->
     <xacro:property name="workbench_height_1" value="0.1" />
     <xacro:property name="workbench_length_1" value="2" />
-    <xacro:property name="workbench_width_1" value="4" />
+    <xacro:property name="workbench_width_1" value="5" />
     <xacro:property name="workbench_name_1" value="main_workbench" />
 
     <xacro:property name="workbench_height_2" value="0.6" />
     <xacro:property name="workbench_length_2" value="2" />
-    <xacro:property name="workbench_width_2" value="4" />
+    <xacro:property name="workbench_width_2" value="5" />
     <xacro:property name="workbench_name_2" value="main_workbench_2" />
 
     <!-- Instantiate the workbench 1 as the root link -->
@@ -26,16 +30,17 @@
     <joint name="base_to_workbench_1_joint" type="fixed">
         <parent link="central_base_link"/>
         <child link="${workbench_name_1}"/>
-        <origin xyz="0 0 0" rpy="0 0 0"/> <!-- Adjust this origin as needed -->
+        <origin xyz="0 0 0" rpy="0 0 0"/>
     </joint>
 
     <joint name="base_to_workbench_2_joint" type="fixed">
         <parent link="central_base_link"/>
         <child link="${workbench_name_2}"/>
-        <origin xyz="${workbench_width_1/2} 0 0" rpy="0 0 0"/> <!-- Adjust this origin as needed -->
+        <origin xyz="${workbench_width_1/2} 0 0" rpy="0 0 0"/>
     </joint>
 
-    <!-- Instantiate the arm, attaching it to the central base link -->
-    <xacro:arm prefix="left_" parent_link="central_base_link" xyz="0 1 ${workbench_height_1}" rpy="0 0 0" />
-    <xacro:arm prefix="right_" parent_link="central_base_link" xyz="0 -1 ${workbench_height_1}" rpy="0 0 0" />
+    <!-- Instantiate the arms, attaching it to the central base link -->
+    <xacro:arm prefix="alex_" parent_link="central_base_link" xyz="0 0 ${workbench_height_1}" rpy="0 0 0" />
+    <xacro:arm_coco prefix="coco_" parent_link="central_base_link" xyz="0 1 ${workbench_height_1}" rpy="0 0 0" />
+    <xacro:arm_yuzi prefix="yuzi_" parent_link="central_base_link" xyz="0 2 ${workbench_height_1}" rpy="0 0 0" />
 </robot>

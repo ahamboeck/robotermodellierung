@@ -1,0 +1,120 @@
+arm_alex_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - alex_arm_joint_1
+    - alex_arm_joint_2
+    - alex_arm_joint_3
+    - alex_arm_joint_4
+    - alex_arm_joint_5
+    - alex_arm_joint_6
+  gains:
+    alex_arm_joint_1:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    alex_arm_joint_2:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    alex_arm_joint_3:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    alex_arm_joint_4:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    alex_arm_joint_5:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    alex_arm_joint_6:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+yuzi_robot_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - yuzi_joint_link_1_yuzi
+    - yuzi_joint_link_2_yuzi
+    - yuzi_joint_link_3_yuzi
+    - yuzi_joint_link_4_yuzi
+    - yuzi_joint_link_5_yuzi
+    - yuzi_joint_link_6_yuzi
+  gains:
+    yuzi_joint_link_1_yuzi:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    yuzi_joint_link_2_yuzi:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    yuzi_joint_link_3_yuzi:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    yuzi_joint_link_4_yuzi:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    yuzi_joint_link_5_yuzi:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    yuzi_joint_link_6_yuzi:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+coco_robot_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - coco_joint_link_1_coco
+    - coco_joint_link_2_coco
+    - coco_joint_link_3_coco
+    - coco_joint_link_4_coco
+    - coco_joint_link_5_coco
+    - coco_arm_joint_6_coco
+  gains:
+    coco_joint_link_1_coco:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    coco_joint_link_2_coco:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    coco_joint_link_3_coco:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    coco_joint_link_4_coco:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    coco_joint_link_5_coco:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    coco_arm_joint_6_coco:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
