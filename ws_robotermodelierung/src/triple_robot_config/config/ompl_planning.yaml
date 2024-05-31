@@ -164,7 +164,7 @@ planner_configs:
     stop_on_each_solution_improvement: 0  # stop the planner each time a solution improvement is found. Useful for debugging. Default: 0
     use_strict_queue_ordering: 0  # sort edges in the queue at the end of the batch (0) or after each rewiring (1). Default: 0
     find_approximate_solutions: 0  # track approximate solutions (1) or not (0). Default: 0
-arm_alex:
+alex_robot:
   default_planner_config: RRT
   planner_configs:
     - AnytimePathShortening
@@ -283,7 +283,7 @@ eef_robot_alex:
     - AITstar
     - ABITstar
     - BITstar
-eef_robot_coco:
+eef_robot_yuzi:
   planner_configs:
     - AnytimePathShortening
     - SBL
@@ -312,7 +312,7 @@ eef_robot_coco:
     - AITstar
     - ABITstar
     - BITstar
-eef_robot_yuzi:
+eef_robot_coco:
   planner_configs:
     - AnytimePathShortening
     - SBL

@@ -1,5 +1,5 @@
-stomp/arm_alex:
-  group_name: arm_alex
+stomp/alex_robot:
+  group_name: alex_robot
   optimization:
     num_timesteps: 60
     num_iterations: 40
@@ -154,8 +154,8 @@ stomp/eef_robot_alex:
         publish_intermediate: True
         marker_topic: stomp_trajectory
         marker_namespace: optimized
-stomp/eef_robot_coco:
-  group_name: eef_robot_coco
+stomp/eef_robot_yuzi:
+  group_name: eef_robot_yuzi
   optimization:
     num_timesteps: 60
     num_iterations: 40
@@ -193,8 +193,8 @@ stomp/eef_robot_coco:
         publish_intermediate: True
         marker_topic: stomp_trajectory
         marker_namespace: optimized
-stomp/eef_robot_yuzi:
-  group_name: eef_robot_yuzi
+stomp/eef_robot_coco:
+  group_name: eef_robot_coco
   optimization:
     num_timesteps: 60
     num_iterations: 40
@@ -206,7 +206,7 @@ stomp/eef_robot_yuzi:
   task:
     noise_generator:
       - class: stomp_moveit/NormalDistributionSampling
-        stddev: [0.05]
+        stddev: []
     cost_functions:
       - class: stomp_moveit/CollisionCheck
         collision_penalty: 1.0
