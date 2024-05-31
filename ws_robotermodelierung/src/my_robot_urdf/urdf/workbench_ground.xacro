@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <xacro:macro name="workbench" params="workbench_name workbench_height=1.0 workbench_length=2 workbench_width=2">
+    <xacro:macro name="workbench_ground" params="workbench_name workbench_height=1.0 workbench_length=2 workbench_width=2">
         <link name="${workbench_name}">
             <inertial>
                 <origin xyz="0 0 ${workbench_height / 2}" rpy="0 0 0"/>
@@ -12,8 +12,8 @@
                 <geometry>
                     <box size="${workbench_length} ${workbench_width} ${workbench_height}"/>
                 </geometry>
-                <material name="rubber_black">
-                    <color rgba="0.05 0.05 0.05 1"/> <!-- Dark grey to mimic black rubber -->
+                <material name="light_grey">
+                    <color rgba="0.7 0.7 0.7 1"/> <!-- White grey color -->
                 </material>
             </visual>
             <collision>

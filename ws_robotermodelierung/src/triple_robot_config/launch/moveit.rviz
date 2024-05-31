@@ -4,9 +4,9 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /MotionPlanning1
+        - /RobotModel1
       Splitter Ratio: 0.5
-    Tree Height: 407
+    Tree Height: 1628
   - Class: rviz/Help
     Name: Help
   - Class: rviz/Views
@@ -41,8 +41,8 @@ Visualization Manager:
       Value: true
     - Acceleration_Scaling_Factor: 0.1
       Class: moveit_rviz_plugin/MotionPlanning
-      Enabled: true
-      JointsTab_Use_Radians: false
+      Enabled: false
+      JointsTab_Use_Radians: true
       Move Group Namespace: ""
       MoveIt_Allow_Approximate_IK: false
       MoveIt_Allow_External_Program: false
@@ -71,155 +71,6 @@ Visualization Manager:
           Expand Link Details: false
           Expand Tree: false
           Link Tree Style: Links in Alphabetic Order
-          alex_arm_link_1:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          alex_arm_link_2:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          alex_arm_link_3:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          alex_arm_link_4:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          alex_arm_link_5:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          alex_arm_link_6:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          alex_base_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          alex_eef_jaw_1:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          alex_eef_jaw_2:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          alex_eef_jaw_3:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          alex_eef_jaw_4:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          alex_eef_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          central_base_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          coco_arm_link_1_coco:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          coco_arm_link_2_coco:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          coco_arm_link_3_coco:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          coco_arm_link_4_coco:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          coco_arm_link_5_coco:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          coco_arm_link_6_coco:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          coco_base_link_coco:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          coco_eef_link_coco:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          main_workbench:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          main_workbench_2:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          yuzi_arm_link_1_yuzi:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          yuzi_arm_link_2_yuzi:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          yuzi_arm_link_3_yuzi:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          yuzi_arm_link_4_yuzi:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          yuzi_arm_link_5_yuzi:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          yuzi_arm_link_6_yuzi:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          yuzi_base_link_yuzi:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
         Loop Animation: true
         Robot Alpha: 0.5
         Robot Color: 150; 50; 150
@@ -266,160 +117,228 @@ Visualization Manager:
           Expand Link Details: false
           Expand Tree: false
           Link Tree Style: Links in Alphabetic Order
-          alex_arm_link_1:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          alex_arm_link_2:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          alex_arm_link_3:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          alex_arm_link_4:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          alex_arm_link_5:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          alex_arm_link_6:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          alex_base_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          alex_eef_jaw_1:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          alex_eef_jaw_2:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          alex_eef_jaw_3:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          alex_eef_jaw_4:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          alex_eef_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          central_base_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          coco_arm_link_1_coco:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          coco_arm_link_2_coco:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          coco_arm_link_3_coco:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          coco_arm_link_4_coco:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          coco_arm_link_5_coco:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          coco_arm_link_6_coco:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          coco_base_link_coco:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          coco_eef_link_coco:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          main_workbench:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          main_workbench_2:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          yuzi_arm_link_1_yuzi:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          yuzi_arm_link_2_yuzi:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          yuzi_arm_link_3_yuzi:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          yuzi_arm_link_4_yuzi:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          yuzi_arm_link_5_yuzi:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          yuzi_arm_link_6_yuzi:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          yuzi_base_link_yuzi:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
         Robot Alpha: 0.5
         Show Robot Collision: false
         Show Robot Visual: true
-      Value: true
+      Value: false
       Velocity_Scaling_Factor: 0.1
+    - Class: rviz/TF
+      Enabled: true
+      Filter (blacklist): ""
+      Filter (whitelist): ""
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+        alex_arm_link_1_alex:
+          Value: true
+        alex_arm_link_2_alex:
+          Value: true
+        alex_arm_link_3_alex:
+          Value: true
+        alex_arm_link_4_alex:
+          Value: true
+        alex_arm_link_5_alex:
+          Value: true
+        alex_arm_link_6_alex:
+          Value: true
+        alex_base_link_alex:
+          Value: true
+        alex_eef_link_alex:
+          Value: true
+        central_base_link:
+          Value: true
+        centrifuge_1:
+          Value: true
+        centrifuge_2:
+          Value: true
+        main_workbench:
+          Value: true
+        main_workbench_2:
+          Value: true
+        main_workbench_3:
+          Value: true
+        world:
+          Value: true
+        yuzi_arm_link_1_yuzi:
+          Value: true
+        yuzi_arm_link_2_yuzi:
+          Value: true
+        yuzi_arm_link_3_yuzi:
+          Value: true
+        yuzi_arm_link_4_yuzi:
+          Value: true
+        yuzi_arm_link_5_yuzi:
+          Value: true
+        yuzi_arm_link_6_yuzi:
+          Value: true
+        yuzi_base_link_yuzi:
+          Value: true
+        yuzi_eef_link_yuzi:
+          Value: true
+      Marker Alpha: 1
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        world:
+          central_base_link:
+            alex_base_link_alex:
+              alex_arm_link_1_alex:
+                alex_arm_link_2_alex:
+                  alex_arm_link_3_alex:
+                    alex_arm_link_4_alex:
+                      alex_arm_link_5_alex:
+                        alex_arm_link_6_alex:
+                          alex_eef_link_alex:
+                            {}
+            centrifuge_1:
+              {}
+            centrifuge_2:
+              {}
+            main_workbench:
+              {}
+            main_workbench_2:
+              {}
+            main_workbench_3:
+              {}
+            yuzi_base_link_yuzi:
+              yuzi_arm_link_1_yuzi:
+                yuzi_arm_link_2_yuzi:
+                  yuzi_arm_link_3_yuzi:
+                    yuzi_arm_link_4_yuzi:
+                      yuzi_arm_link_5_yuzi:
+                        yuzi_arm_link_6_yuzi:
+                          yuzi_eef_link_yuzi:
+                            {}
+      Update Interval: 0
+      Value: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: true
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        alex_arm_link_1_alex:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        alex_arm_link_2_alex:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        alex_arm_link_3_alex:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        alex_arm_link_4_alex:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        alex_arm_link_5_alex:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        alex_arm_link_6_alex:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        alex_base_link_alex:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        alex_eef_link_alex:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        central_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        centrifuge_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        centrifuge_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        main_workbench:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        main_workbench_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        main_workbench_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        yuzi_arm_link_1_yuzi:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        yuzi_arm_link_2_yuzi:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        yuzi_arm_link_3_yuzi:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        yuzi_arm_link_4_yuzi:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        yuzi_arm_link_5_yuzi:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        yuzi_arm_link_6_yuzi:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        yuzi_base_link_yuzi:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        yuzi_eef_link_yuzi:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: RobotModel
+      Robot Description: robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: false
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -436,7 +355,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 6.256197929382324
+      Distance: 11.550684928894043
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -444,17 +363,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.75
       Focal Point:
-        X: 0.39405664801597595
-        Y: 1.5648434162139893
-        Z: 0.5222954750061035
+        X: -0.11480892449617386
+        Y: 0.21982897818088531
+        Z: 0.040471747517585754
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.6349996328353882
+      Pitch: 0.6949994564056396
       Target Frame: central_base_link
-      Yaw: 5.608068466186523
+      Yaw: 4.8011908531188965
     Saved: ~
 Window Geometry:
   Displays:
@@ -468,7 +387,7 @@ Window Geometry:
     collapsed: false
   MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000003a300000754fc0200000007fb000000100044006900730070006c006100790073010000006e0000028f0000018200fffffffb0000000800480065006c00700000000342000000bb000000d400fffffffb0000000a00560069006500770073000000010c000000a40000013200fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000002600000026fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670100000309000004b9000002b800ffffff00000ac10000075400000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000003a300000754fc0200000007fb000000100044006900730070006c006100790073010000006e000007540000018200fffffffb0000000800480065006c00700000000342000000bb000000d400fffffffb0000000a00560069006500770073000000010c000000a40000013200fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000002600000026fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670000000309000004b9000002b800ffffff00000ac10000075400000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
   Width: 3696

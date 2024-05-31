@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:macro name="centrifuge" params="centrifuge_name centrifuge_length=1.0 centrifuge_diameter=2">
+        <link name="${centrifuge_name}">
+            <inertial>
+                <origin xyz="0 0 ${centrifuge_length / 2}" rpy="0 0 0"/>
+                <mass value="500.0"/> <!-- Assume a lighter mass for a centrifuge -->
+                <inertia ixx="50" ixy="0" ixz="0" iyy="50" iyz="0" izz="50"/> <!-- Adjusted inertia values for balance -->
+            </inertial>
+            <visual>
+                <origin xyz="0 0 ${centrifuge_length / 2}" rpy="0 0 0"/>
+                <geometry>
+                    <cylinder radius="${centrifuge_diameter / 2}" length="${centrifuge_length}"/>
+                </geometry>
+                <material name="light_orange">
+                    <color rgba="1 0.65 0.2 1"/> <!-- Light orange color -->
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="0 0 ${centrifuge_length / 2}" rpy="0 0 0"/>
+                <geometry>
+                    <cylinder radius="${centrifuge_diameter / 2}" length="${centrifuge_length}"/>
+                </geometry>
+            </collision>
+        </link>
+    </xacro:macro>
+</robot>
