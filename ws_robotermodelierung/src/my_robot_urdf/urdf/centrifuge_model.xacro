@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <xacro:macro name="my_component" params="component_name component_path">
+    <xacro:macro name="centrifuge_model" params="component_name component_path">
         <link name="${component_name}">
             <inertial>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
