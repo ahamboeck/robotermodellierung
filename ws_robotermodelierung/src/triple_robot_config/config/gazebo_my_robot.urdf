@@ -84,7 +84,7 @@
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0.375" />
             <geometry>
-                <cylinder length="0.75" radius="0.5" />
+                <cylinder length="0.75" radius="0.3" />
             </geometry>
             <material name="light_orange">
                 <color rgba="1 0.65 0.2 1" />
@@ -94,7 +94,7 @@
         <collision>
             <origin rpy="0 0 0" xyz="0 0 0.375" />
             <geometry>
-                <cylinder length="0.75" radius="0.5" />
+                <cylinder length="0.75" radius="0.3" />
             </geometry>
         </collision>
     </link>
@@ -109,7 +109,7 @@
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0.375" />
             <geometry>
-                <cylinder length="0.75" radius="0.5" />
+                <cylinder length="0.75" radius="0.3" />
             </geometry>
             <material name="light_orange">
                 <color rgba="1 0.65 0.2 1" />
@@ -119,7 +119,49 @@
         <collision>
             <origin rpy="0 0 0" xyz="0 0 0.375" />
             <geometry>
-                <cylinder length="0.75" radius="0.5" />
+                <cylinder length="0.75" radius="0.3" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="centrifuge_link_1">
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <mass value="1.0" />
+            <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1" />
+        </inertial>
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/models/centrifuge.dae" scale="1 1 1" />
+                <!-- Adjust scale as needed -->
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/models/centrifuge.dae" scale="1 1 1" />
+                <!-- Adjust scale as needed -->
+            </geometry>
+        </collision>
+    </link>
+    <link name="centrifuge_link_2">
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <mass value="1.0" />
+            <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1" />
+        </inertial>
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/models/centrifuge.dae" scale="1 1 1" />
+                <!-- Adjust scale as needed -->
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <geometry>
+                <mesh filename="package://my_robot_urdf/models/centrifuge.dae" scale="1 1 1" />
+                <!-- Adjust scale as needed -->
             </geometry>
         </collision>
     </link>
@@ -148,12 +190,22 @@
     <joint name="base_to_centrifuge_1_joint" type="fixed">
         <parent link="central_base_link" />
         <child link="centrifuge_1" />
-        <origin rpy="0 0 0" xyz="1.7 1.2 0" />
+        <origin rpy="0 0 0" xyz="1.5 1.2 0" />
     </joint>
     <joint name="base_to_centrifuge_2_joint" type="fixed">
         <parent link="central_base_link" />
         <child link="centrifuge_2" />
-        <origin rpy="0 0 0" xyz="-1.7 1.2 0" />
+        <origin rpy="0 0 0" xyz="-1.5 1.2 0" />
+    </joint>
+    <joint name="base_to_centrifuge_model_1_joint" type="fixed">
+        <parent link="central_base_link" />
+        <child link="centrifuge_link_1" />
+        <origin rpy="1.570796326795 0 0" xyz="1.5 1.2 0.9379" />
+    </joint>
+    <joint name="base_to_centrifuge_model_2_joint" type="fixed">
+        <parent link="central_base_link" />
+        <child link="centrifuge_link_2" />
+        <origin rpy="1.570796326795 0 0" xyz="-1.5 1.2 0.9379" />
     </joint>
     <link name="alex_base_link_alex">
         <inertial>

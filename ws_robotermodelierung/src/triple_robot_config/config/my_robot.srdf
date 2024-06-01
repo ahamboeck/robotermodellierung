@@ -10,8 +10,6 @@
     <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
     <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
     <group name="alex_robot">
-        <link name="alex_eef_link_alex"/>
-        <joint name="alex_base_joint_alex"/>
         <joint name="alex_arm_joint_1_alex"/>
         <joint name="alex_arm_joint_2_alex"/>
         <joint name="alex_arm_joint_3_alex"/>
@@ -20,8 +18,6 @@
         <joint name="alex_arm_joint_6_alex"/>
     </group>
     <group name="yuzi_robot">
-        <link name="yuzi_eef_link_yuzi"/>
-        <joint name="yuzi_base_joint_yuzi"/>
         <joint name="yuzi_arm_joint_1_yuzi"/>
         <joint name="yuzi_arm_joint_2_yuzi"/>
         <joint name="yuzi_arm_joint_3_yuzi"/>
@@ -29,9 +25,7 @@
         <joint name="yuzi_arm_joint_5_yuzi"/>
         <joint name="yuzi_arm_joint_6_yuzi"/>
     </group>
-    <group name="coco_robot">
-        <link name="coco_eef_link_1_coco"/>
-        <joint name="coco_base_joint_coco"/>
+    <group name="coco_robot_eef1">
         <joint name="coco_joint_link_1_coco"/>
         <joint name="coco_joint_link_2_coco"/>
         <joint name="coco_joint_link_3_coco"/>
@@ -39,14 +33,24 @@
         <joint name="coco_joint_link_5_coco"/>
         <joint name="coco_arm_joint_6_coco"/>
     </group>
-    <group name="eef_robot_alex">
+    <group name="coco_robot_eef2">
+        <joint name="coco_joint_link_1_coco"/>
+        <joint name="coco_joint_link_2_coco"/>
+        <joint name="coco_joint_link_3_coco"/>
+        <joint name="coco_joint_link_4_coco"/>
+        <joint name="coco_joint_link_5_coco"/>
+        <joint name="coco_arm_joint_6_coco"/>
+    </group>
+    <group name="eef_alex">
         <link name="alex_eef_link_alex"/>
     </group>
-    <group name="eef_robot_yuzi">
+    <group name="eef_yuzi">
         <link name="yuzi_eef_link_yuzi"/>
     </group>
-    <group name="eef_robot_coco">
+    <group name="eef1_coco">
         <link name="coco_eef_link_1_coco"/>
+    </group>
+    <group name="eef2_coco">
         <link name="coco_eef_link_2_coco"/>
     </group>
     <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
@@ -66,7 +70,7 @@
         <joint name="yuzi_arm_joint_5_yuzi" value="0"/>
         <joint name="yuzi_arm_joint_6_yuzi" value="0"/>
     </group_state>
-    <group_state name="home" group="coco_robot">
+    <group_state name="home" group="coco_robot_eef1">
         <joint name="coco_arm_joint_6_coco" value="-1.5708"/>
         <joint name="coco_joint_link_1_coco" value="-1.5708"/>
         <joint name="coco_joint_link_2_coco" value="0"/>
@@ -74,7 +78,7 @@
         <joint name="coco_joint_link_4_coco" value="0"/>
         <joint name="coco_joint_link_5_coco" value="0"/>
     </group_state>
-    <group_state name="grip" group="coco_robot">
+    <group_state name="grip" group="coco_robot_eef1">
         <joint name="coco_arm_joint_6_coco" value="-1.5708"/>
         <joint name="coco_joint_link_1_coco" value="0"/>
         <joint name="coco_joint_link_2_coco" value="0"/>
@@ -83,9 +87,10 @@
         <joint name="coco_joint_link_5_coco" value="1.5708"/>
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
-    <end_effector name="eef_alex" parent_link="central_base_link" group="alex_robot"/>
-    <end_effector name="eef_yuzi" parent_link="central_base_link" group="yuzi_robot"/>
-    <end_effector name="eef_coco" parent_link="central_base_link" group="coco_robot"/>
+    <end_effector name="eef_alex" parent_link="alex_arm_link_6_alex" group="eef_alex"/>
+    <end_effector name="eef_yuzi" parent_link="yuzi_arm_link_6_yuzi" group="eef_yuzi"/>
+    <end_effector name="eef1_coco" parent_link="coco_arm_link_6_coco" group="eef1_coco"/>
+    <end_effector name="eef2_coco" parent_link="coco_arm_link_6_coco" group="eef2_coco"/>
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
     <virtual_joint name="fixed_frame" type="fixed" parent_frame="world" child_link="central_base_link"/>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
@@ -93,6 +98,8 @@
     <disable_collisions link1="alex_arm_link_1_alex" link2="alex_base_link_alex" reason="Adjacent"/>
     <disable_collisions link1="alex_arm_link_1_alex" link2="centrifuge_1" reason="Never"/>
     <disable_collisions link1="alex_arm_link_1_alex" link2="centrifuge_2" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_1_alex" link2="centrifuge_link_1" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_1_alex" link2="centrifuge_link_2" reason="Never"/>
     <disable_collisions link1="alex_arm_link_1_alex" link2="coco_arm_link_1_coco" reason="Never"/>
     <disable_collisions link1="alex_arm_link_1_alex" link2="coco_arm_link_2_coco" reason="Never"/>
     <disable_collisions link1="alex_arm_link_1_alex" link2="coco_base_link_coco" reason="Never"/>
@@ -111,6 +118,9 @@
     <disable_collisions link1="alex_arm_link_2_alex" link2="alex_arm_link_4_alex" reason="Never"/>
     <disable_collisions link1="alex_arm_link_2_alex" link2="alex_arm_link_5_alex" reason="Never"/>
     <disable_collisions link1="alex_arm_link_2_alex" link2="centrifuge_1" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_2_alex" link2="centrifuge_2" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_2_alex" link2="centrifuge_link_1" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_2_alex" link2="centrifuge_link_2" reason="Never"/>
     <disable_collisions link1="alex_arm_link_2_alex" link2="coco_arm_link_1_coco" reason="Never"/>
     <disable_collisions link1="alex_arm_link_2_alex" link2="coco_base_link_coco" reason="Never"/>
     <disable_collisions link1="alex_arm_link_2_alex" link2="main_workbench_2" reason="Never"/>
@@ -123,6 +133,7 @@
     <disable_collisions link1="alex_arm_link_3_alex" link2="alex_arm_link_6_alex" reason="Never"/>
     <disable_collisions link1="alex_arm_link_3_alex" link2="alex_eef_link_alex" reason="Never"/>
     <disable_collisions link1="alex_arm_link_3_alex" link2="centrifuge_1" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_3_alex" link2="centrifuge_link_1" reason="Never"/>
     <disable_collisions link1="alex_arm_link_3_alex" link2="main_workbench_2" reason="Never"/>
     <disable_collisions link1="alex_arm_link_3_alex" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
     <disable_collisions link1="alex_arm_link_3_alex" link2="yuzi_arm_link_2_yuzi" reason="Never"/>
@@ -130,21 +141,25 @@
     <disable_collisions link1="alex_arm_link_3_alex" link2="yuzi_base_link_yuzi" reason="Never"/>
     <disable_collisions link1="alex_arm_link_4_alex" link2="alex_arm_link_5_alex" reason="Adjacent"/>
     <disable_collisions link1="alex_arm_link_4_alex" link2="centrifuge_1" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_4_alex" link2="centrifuge_link_1" reason="Never"/>
     <disable_collisions link1="alex_arm_link_4_alex" link2="main_workbench_2" reason="Never"/>
     <disable_collisions link1="alex_arm_link_4_alex" link2="yuzi_base_link_yuzi" reason="Never"/>
     <disable_collisions link1="alex_arm_link_5_alex" link2="alex_arm_link_6_alex" reason="Adjacent"/>
     <disable_collisions link1="alex_arm_link_5_alex" link2="alex_eef_link_alex" reason="Never"/>
     <disable_collisions link1="alex_arm_link_5_alex" link2="centrifuge_1" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_5_alex" link2="centrifuge_link_1" reason="Never"/>
     <disable_collisions link1="alex_arm_link_5_alex" link2="main_workbench_2" reason="Never"/>
     <disable_collisions link1="alex_arm_link_5_alex" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
     <disable_collisions link1="alex_arm_link_5_alex" link2="yuzi_base_link_yuzi" reason="Never"/>
     <disable_collisions link1="alex_arm_link_6_alex" link2="alex_eef_link_alex" reason="Adjacent"/>
     <disable_collisions link1="alex_arm_link_6_alex" link2="centrifuge_1" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_6_alex" link2="centrifuge_link_1" reason="Never"/>
     <disable_collisions link1="alex_arm_link_6_alex" link2="main_workbench_2" reason="Never"/>
-    <disable_collisions link1="alex_arm_link_6_alex" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
     <disable_collisions link1="alex_arm_link_6_alex" link2="yuzi_base_link_yuzi" reason="Never"/>
     <disable_collisions link1="alex_base_link_alex" link2="centrifuge_1" reason="Adjacent"/>
     <disable_collisions link1="alex_base_link_alex" link2="centrifuge_2" reason="Adjacent"/>
+    <disable_collisions link1="alex_base_link_alex" link2="centrifuge_link_1" reason="Adjacent"/>
+    <disable_collisions link1="alex_base_link_alex" link2="centrifuge_link_2" reason="Adjacent"/>
     <disable_collisions link1="alex_base_link_alex" link2="coco_arm_link_1_coco" reason="Never"/>
     <disable_collisions link1="alex_base_link_alex" link2="coco_arm_link_2_coco" reason="Never"/>
     <disable_collisions link1="alex_base_link_alex" link2="coco_base_link_coco" reason="Adjacent"/>
@@ -160,8 +175,11 @@
     <disable_collisions link1="alex_base_link_alex" link2="yuzi_base_link_yuzi" reason="Adjacent"/>
     <disable_collisions link1="alex_base_link_alex" link2="yuzi_eef_link_yuzi" reason="Never"/>
     <disable_collisions link1="alex_eef_link_alex" link2="centrifuge_1" reason="Never"/>
+    <disable_collisions link1="alex_eef_link_alex" link2="centrifuge_link_1" reason="Never"/>
     <disable_collisions link1="alex_eef_link_alex" link2="main_workbench_2" reason="Never"/>
     <disable_collisions link1="centrifuge_1" link2="centrifuge_2" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_1" link2="centrifuge_link_1" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_1" link2="centrifuge_link_2" reason="Adjacent"/>
     <disable_collisions link1="centrifuge_1" link2="coco_arm_link_1_coco" reason="Never"/>
     <disable_collisions link1="centrifuge_1" link2="coco_arm_link_2_coco" reason="Never"/>
     <disable_collisions link1="centrifuge_1" link2="coco_base_link_coco" reason="Adjacent"/>
@@ -172,6 +190,8 @@
     <disable_collisions link1="centrifuge_1" link2="yuzi_arm_link_2_yuzi" reason="Never"/>
     <disable_collisions link1="centrifuge_1" link2="yuzi_arm_link_3_yuzi" reason="Never"/>
     <disable_collisions link1="centrifuge_1" link2="yuzi_base_link_yuzi" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_2" link2="centrifuge_link_1" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_2" link2="centrifuge_link_2" reason="Adjacent"/>
     <disable_collisions link1="centrifuge_2" link2="coco_arm_link_1_coco" reason="Never"/>
     <disable_collisions link1="centrifuge_2" link2="coco_arm_link_2_coco" reason="Never"/>
     <disable_collisions link1="centrifuge_2" link2="coco_base_link_coco" reason="Adjacent"/>
@@ -186,6 +206,31 @@
     <disable_collisions link1="centrifuge_2" link2="yuzi_arm_link_6_yuzi" reason="Never"/>
     <disable_collisions link1="centrifuge_2" link2="yuzi_base_link_yuzi" reason="Adjacent"/>
     <disable_collisions link1="centrifuge_2" link2="yuzi_eef_link_yuzi" reason="Never"/>
+    <disable_collisions link1="centrifuge_link_1" link2="centrifuge_link_2" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_link_1" link2="coco_arm_link_1_coco" reason="Never"/>
+    <disable_collisions link1="centrifuge_link_1" link2="coco_arm_link_2_coco" reason="Never"/>
+    <disable_collisions link1="centrifuge_link_1" link2="coco_base_link_coco" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_link_1" link2="main_workbench" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_link_1" link2="main_workbench_2" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_link_1" link2="main_workbench_3" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_link_1" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
+    <disable_collisions link1="centrifuge_link_1" link2="yuzi_arm_link_2_yuzi" reason="Never"/>
+    <disable_collisions link1="centrifuge_link_1" link2="yuzi_arm_link_3_yuzi" reason="Never"/>
+    <disable_collisions link1="centrifuge_link_1" link2="yuzi_base_link_yuzi" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_link_2" link2="coco_arm_link_1_coco" reason="Never"/>
+    <disable_collisions link1="centrifuge_link_2" link2="coco_arm_link_2_coco" reason="Never"/>
+    <disable_collisions link1="centrifuge_link_2" link2="coco_base_link_coco" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_link_2" link2="main_workbench" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_link_2" link2="main_workbench_2" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_link_2" link2="main_workbench_3" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_link_2" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
+    <disable_collisions link1="centrifuge_link_2" link2="yuzi_arm_link_2_yuzi" reason="Never"/>
+    <disable_collisions link1="centrifuge_link_2" link2="yuzi_arm_link_3_yuzi" reason="Never"/>
+    <disable_collisions link1="centrifuge_link_2" link2="yuzi_arm_link_4_yuzi" reason="Never"/>
+    <disable_collisions link1="centrifuge_link_2" link2="yuzi_arm_link_5_yuzi" reason="Never"/>
+    <disable_collisions link1="centrifuge_link_2" link2="yuzi_arm_link_6_yuzi" reason="Never"/>
+    <disable_collisions link1="centrifuge_link_2" link2="yuzi_base_link_yuzi" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_link_2" link2="yuzi_eef_link_yuzi" reason="Never"/>
     <disable_collisions link1="coco_arm_link_1_coco" link2="coco_arm_link_2_coco" reason="Adjacent"/>
     <disable_collisions link1="coco_arm_link_1_coco" link2="coco_base_link_coco" reason="Adjacent"/>
     <disable_collisions link1="coco_arm_link_1_coco" link2="main_workbench" reason="Never"/>

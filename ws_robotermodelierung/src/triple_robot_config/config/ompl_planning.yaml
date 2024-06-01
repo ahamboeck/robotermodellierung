@@ -194,6 +194,8 @@ alex_robot:
     - AITstar
     - ABITstar
     - BITstar
+  projection_evaluator: joints(alex_arm_joint_1_alex,alex_arm_joint_2_alex)
+  longest_valid_segment_fraction: 0.005
 yuzi_robot:
   default_planner_config: RRT
   planner_configs:
@@ -224,7 +226,9 @@ yuzi_robot:
     - AITstar
     - ABITstar
     - BITstar
-coco_robot:
+  projection_evaluator: joints(yuzi_arm_joint_1_yuzi,yuzi_arm_joint_2_yuzi)
+  longest_valid_segment_fraction: 0.005
+coco_robot_eef1:
   default_planner_config: RRT
   planner_configs:
     - AnytimePathShortening
@@ -254,7 +258,9 @@ coco_robot:
     - AITstar
     - ABITstar
     - BITstar
-eef_robot_alex:
+  projection_evaluator: joints(coco_joint_link_1_coco,coco_joint_link_2_coco)
+  longest_valid_segment_fraction: 0.005
+coco_robot_eef2:
   planner_configs:
     - AnytimePathShortening
     - SBL
@@ -283,7 +289,9 @@ eef_robot_alex:
     - AITstar
     - ABITstar
     - BITstar
-eef_robot_yuzi:
+  projection_evaluator: joints(coco_joint_link_1_coco,coco_joint_link_2_coco)
+  longest_valid_segment_fraction: 0.005
+eef_alex:
   planner_configs:
     - AnytimePathShortening
     - SBL
@@ -312,7 +320,65 @@ eef_robot_yuzi:
     - AITstar
     - ABITstar
     - BITstar
-eef_robot_coco:
+eef_yuzi:
+  planner_configs:
+    - AnytimePathShortening
+    - SBL
+    - EST
+    - LBKPIECE
+    - BKPIECE
+    - KPIECE
+    - RRT
+    - RRTConnect
+    - RRTstar
+    - TRRT
+    - PRM
+    - PRMstar
+    - FMT
+    - BFMT
+    - PDST
+    - STRIDE
+    - BiTRRT
+    - LBTRRT
+    - BiEST
+    - ProjEST
+    - LazyPRM
+    - LazyPRMstar
+    - SPARS
+    - SPARStwo
+    - AITstar
+    - ABITstar
+    - BITstar
+eef1_coco:
+  planner_configs:
+    - AnytimePathShortening
+    - SBL
+    - EST
+    - LBKPIECE
+    - BKPIECE
+    - KPIECE
+    - RRT
+    - RRTConnect
+    - RRTstar
+    - TRRT
+    - PRM
+    - PRMstar
+    - FMT
+    - BFMT
+    - PDST
+    - STRIDE
+    - BiTRRT
+    - LBTRRT
+    - BiEST
+    - ProjEST
+    - LazyPRM
+    - LazyPRMstar
+    - SPARS
+    - SPARStwo
+    - AITstar
+    - ABITstar
+    - BITstar
+eef2_coco:
   planner_configs:
     - AnytimePathShortening
     - SBL

@@ -1,27 +1,38 @@
 controller_list:
-  - name: arm_alex_controller
+  - name: alex_robot_controller
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     default: True
     joints:
-      - alex_arm_joint_1
-      - alex_arm_joint_2
-      - alex_arm_joint_3
-      - alex_arm_joint_4
-      - alex_arm_joint_5
-      - alex_arm_joint_6
+      - alex_arm_joint_1_alex
+      - alex_arm_joint_2_alex
+      - alex_arm_joint_3_alex
+      - alex_arm_joint_4_alex
+      - alex_arm_joint_5_alex
+      - alex_arm_joint_6_alex
   - name: yuzi_robot_controller
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     default: True
     joints:
-      - yuzi_joint_link_1_yuzi
-      - yuzi_joint_link_2_yuzi
-      - yuzi_joint_link_3_yuzi
-      - yuzi_joint_link_4_yuzi
-      - yuzi_joint_link_5_yuzi
-      - yuzi_joint_link_6_yuzi
-  - name: coco_robot_controller
+      - yuzi_arm_joint_1_yuzi
+      - yuzi_arm_joint_2_yuzi
+      - yuzi_arm_joint_3_yuzi
+      - yuzi_arm_joint_4_yuzi
+      - yuzi_arm_joint_5_yuzi
+      - yuzi_arm_joint_6_yuzi
+  - name: coco_robot_eef1_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - coco_joint_link_1_coco
+      - coco_joint_link_2_coco
+      - coco_joint_link_3_coco
+      - coco_joint_link_4_coco
+      - coco_joint_link_5_coco
+      - coco_arm_joint_6_coco
+  - name: coco_robot_eef2_controller
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     default: True

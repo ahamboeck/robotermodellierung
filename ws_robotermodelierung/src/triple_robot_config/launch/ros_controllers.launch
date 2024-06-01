@@ -6,6 +6,6 @@
 
   <!-- Load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-    output="screen" args="arm_alex_controller yuzi_robot_controller coco_robot_controller "/>
+    output="screen" args="alex_robot_controller yuzi_robot_controller coco_robot_eef1_controller coco_robot_eef2_controller "/>
 
 </launch>
