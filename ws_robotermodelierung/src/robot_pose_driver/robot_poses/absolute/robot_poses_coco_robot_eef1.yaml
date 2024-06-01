@@ -1,0 +1,130 @@
+position_1:
+    pose_name: "phil_yuzi"
+    pose:
+        position:
+            x: 0.788
+            y: 0.584
+            z: 1.676
+        orientation:
+            x: 0.500
+            y: 0.500
+            z: -0.500
+            w: 0.500
+
+position_1:
+    pose_name: "phil_alex"
+    pose:
+        position:
+            x: -0.754
+            y: 0.533
+            z: 1.555
+        orientation:
+            x: 0.500
+            y: 0.500
+            z: -0.500
+            w: 0.500
+
+position_2:
+    pose_name: "pick_right"
+    pose:
+        position:
+            x: 1.121
+            y: 1.212
+            z: 1.108
+        orientation:
+            x: -0.030
+            y: -0.997
+            z: 0.015
+            w: 0.073
+
+position_3:
+    pose_name: "up_right"
+    pose:
+        position:
+            x: 1.154
+            y: 1.218
+            z: 1.334
+        orientation:
+            x: -0.030
+            y: -0.997
+            z: 0.015
+            w: 0.073
+
+position_4:
+    pose_name: "pick_left"
+    pose:
+        position:
+            x: -1.130
+            y: 1.205
+            z: 1.102
+        orientation:
+            x: 0.997
+            y: 0.007
+            z: 0.077
+            w: 0.017
+
+position_5:
+    pose_name: "up_left"
+    pose:
+        position:
+            x: -1.182
+            y: 1.217
+            z: 1.435
+        orientation:
+            x: 0.997
+            y: 0.007
+            z: 0.077
+            w: 0.017
+
+position_6:
+    pose_name: "place"
+    pose:
+        position:
+            x: 0.219
+            y: 1.938
+            z: 1.005
+        orientation:
+            x: -0.999
+            y: -0.031
+            z: -0.008
+            w: 0.019
+
+position_7:
+    pose_name: "place_up"
+    pose:
+        position:
+            x: 0.216
+            y: 1.930
+            z: 1.227
+        orientation:
+            x: -0.999
+            y: -0.031
+            z: -0.008
+            w: 0.019
+
+position_1:
+    pose_name: "home"
+    pose:
+        position:
+            x: 1.085
+            y: 0.981
+            z: 1.642
+        orientation:
+            x: -0.500
+            y: 0.500
+            z: -0.500
+            w: 0.500
+
+position_2:
+    pose_name: "home"
+    pose:
+        position:
+            x: -0.019
+            y: -0.085
+            z: 1.642
+        orientation:
+            x: 0.500
+            y: 0.500
+            z: -0.500
+            w: 0.500
+

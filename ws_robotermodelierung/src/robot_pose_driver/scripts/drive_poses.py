@@ -20,7 +20,7 @@ def drive_robot(move_group, joints):
             move_group.stop()  # Ensure no residual movement
         except moveit_commander.MoveItCommanderException as e:
             rospy.logerr(f"Error moving {move_group.get_name()}: {str(e)}")
-    rospy.sleep(1)  # Wait a bit to ensure the robot has reached the pose
+    # rospy.sleep(1)  # Wait a bit to ensure the robot has reached the pose
 
 def main():
     rospack = rospkg.RosPack()
@@ -44,25 +44,26 @@ def main():
     move_sequence = load_yaml(os.path.join(path, 'robot_poses/joint/move_sequence.yaml'))
 
     # Execute each move in the sequence
-    for move in move_sequence:
-        group_name = move['move_group']
-        pose_name = move['pose']
-        if group_name in move_groups:
-            pose_file = os.path.join(path, f'robot_poses/joint/Joint_Positions_{group_name}.yaml')
-            all_poses = load_yaml(pose_file)
-            if all_poses:
-                # Find the correct pose by iterating and matching pose_name
-                for key, details in all_poses.items():
-                    if details.get('pose_name') == pose_name:
-                        rospy.loginfo(f"Moving {group_name} to {pose_name}: {details['pose_name']}")
-                        drive_robot(move_groups[group_name], details['joints'])
-                        break
+    while not rospy.is_shutdown() and move_sequence:
+        for move in move_sequence:
+            group_name = move['move_group']
+            pose_name = move['pose']
+            if group_name in move_groups:
+                pose_file = os.path.join(path, f'robot_poses/joint/robot_poses_{group_name}.yaml')
+                all_poses = load_yaml(pose_file)
+                if all_poses:
+                    # Find the correct pose by iterating and matching pose_name
+                    for key, details in all_poses.items():
+                        if details.get('pose_name') == pose_name:
+                            rospy.loginfo(f"Moving {group_name} to {pose_name}: {details['pose_name']}")
+                            drive_robot(move_groups[group_name], details['joints'])
+                            break
+                    else:
+                        rospy.logerr(f"Pose {pose_name} not found in file {pose_file}")
                 else:
-                    rospy.logerr(f"Pose {pose_name} not found in file {pose_file}")
+                    rospy.logerr(f"No poses found in file {pose_file}")
             else:
-                rospy.logerr(f"No poses found in file {pose_file}")
-        else:
-            rospy.logerr(f"Move group {group_name} not defined")
+                rospy.logerr(f"Move group {group_name} not defined")
 
 if __name__ == '__main__':
     main()

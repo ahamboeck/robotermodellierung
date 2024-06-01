@@ -106,6 +106,10 @@
     <disable_collisions link1="alex_arm_link_1_alex" link2="main_workbench" reason="Never"/>
     <disable_collisions link1="alex_arm_link_1_alex" link2="main_workbench_2" reason="Never"/>
     <disable_collisions link1="alex_arm_link_1_alex" link2="main_workbench_3" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_1_alex" link2="main_workbench_4" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_1_alex" link2="rack_link_1" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_1_alex" link2="rack_link_2" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_1_alex" link2="rack_link_3" reason="Never"/>
     <disable_collisions link1="alex_arm_link_1_alex" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
     <disable_collisions link1="alex_arm_link_1_alex" link2="yuzi_arm_link_2_yuzi" reason="Never"/>
     <disable_collisions link1="alex_arm_link_1_alex" link2="yuzi_arm_link_3_yuzi" reason="Never"/>
@@ -118,12 +122,15 @@
     <disable_collisions link1="alex_arm_link_2_alex" link2="alex_arm_link_4_alex" reason="Never"/>
     <disable_collisions link1="alex_arm_link_2_alex" link2="alex_arm_link_5_alex" reason="Never"/>
     <disable_collisions link1="alex_arm_link_2_alex" link2="centrifuge_1" reason="Never"/>
-    <disable_collisions link1="alex_arm_link_2_alex" link2="centrifuge_2" reason="Never"/>
     <disable_collisions link1="alex_arm_link_2_alex" link2="centrifuge_link_1" reason="Never"/>
     <disable_collisions link1="alex_arm_link_2_alex" link2="centrifuge_link_2" reason="Never"/>
     <disable_collisions link1="alex_arm_link_2_alex" link2="coco_arm_link_1_coco" reason="Never"/>
     <disable_collisions link1="alex_arm_link_2_alex" link2="coco_base_link_coco" reason="Never"/>
     <disable_collisions link1="alex_arm_link_2_alex" link2="main_workbench_2" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_2_alex" link2="main_workbench_4" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_2_alex" link2="rack_link_1" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_2_alex" link2="rack_link_2" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_2_alex" link2="rack_link_3" reason="Never"/>
     <disable_collisions link1="alex_arm_link_2_alex" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
     <disable_collisions link1="alex_arm_link_2_alex" link2="yuzi_arm_link_2_yuzi" reason="Never"/>
     <disable_collisions link1="alex_arm_link_2_alex" link2="yuzi_arm_link_3_yuzi" reason="Never"/>
@@ -135,6 +142,9 @@
     <disable_collisions link1="alex_arm_link_3_alex" link2="centrifuge_1" reason="Never"/>
     <disable_collisions link1="alex_arm_link_3_alex" link2="centrifuge_link_1" reason="Never"/>
     <disable_collisions link1="alex_arm_link_3_alex" link2="main_workbench_2" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_3_alex" link2="main_workbench_4" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_3_alex" link2="rack_link_1" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_3_alex" link2="rack_link_3" reason="Never"/>
     <disable_collisions link1="alex_arm_link_3_alex" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
     <disable_collisions link1="alex_arm_link_3_alex" link2="yuzi_arm_link_2_yuzi" reason="Never"/>
     <disable_collisions link1="alex_arm_link_3_alex" link2="yuzi_arm_link_3_yuzi" reason="Never"/>
@@ -143,18 +153,25 @@
     <disable_collisions link1="alex_arm_link_4_alex" link2="centrifuge_1" reason="Never"/>
     <disable_collisions link1="alex_arm_link_4_alex" link2="centrifuge_link_1" reason="Never"/>
     <disable_collisions link1="alex_arm_link_4_alex" link2="main_workbench_2" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_4_alex" link2="rack_link_1" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_4_alex" link2="rack_link_3" reason="Never"/>
     <disable_collisions link1="alex_arm_link_4_alex" link2="yuzi_base_link_yuzi" reason="Never"/>
     <disable_collisions link1="alex_arm_link_5_alex" link2="alex_arm_link_6_alex" reason="Adjacent"/>
     <disable_collisions link1="alex_arm_link_5_alex" link2="alex_eef_link_alex" reason="Never"/>
     <disable_collisions link1="alex_arm_link_5_alex" link2="centrifuge_1" reason="Never"/>
     <disable_collisions link1="alex_arm_link_5_alex" link2="centrifuge_link_1" reason="Never"/>
     <disable_collisions link1="alex_arm_link_5_alex" link2="main_workbench_2" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_5_alex" link2="rack_link_1" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_5_alex" link2="rack_link_3" reason="Never"/>
     <disable_collisions link1="alex_arm_link_5_alex" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
     <disable_collisions link1="alex_arm_link_5_alex" link2="yuzi_base_link_yuzi" reason="Never"/>
     <disable_collisions link1="alex_arm_link_6_alex" link2="alex_eef_link_alex" reason="Adjacent"/>
     <disable_collisions link1="alex_arm_link_6_alex" link2="centrifuge_1" reason="Never"/>
     <disable_collisions link1="alex_arm_link_6_alex" link2="centrifuge_link_1" reason="Never"/>
     <disable_collisions link1="alex_arm_link_6_alex" link2="main_workbench_2" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_6_alex" link2="rack_link_1" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_6_alex" link2="rack_link_3" reason="Never"/>
+    <disable_collisions link1="alex_arm_link_6_alex" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
     <disable_collisions link1="alex_arm_link_6_alex" link2="yuzi_base_link_yuzi" reason="Never"/>
     <disable_collisions link1="alex_base_link_alex" link2="centrifuge_1" reason="Adjacent"/>
     <disable_collisions link1="alex_base_link_alex" link2="centrifuge_2" reason="Adjacent"/>
@@ -166,6 +183,10 @@
     <disable_collisions link1="alex_base_link_alex" link2="main_workbench" reason="Adjacent"/>
     <disable_collisions link1="alex_base_link_alex" link2="main_workbench_2" reason="Adjacent"/>
     <disable_collisions link1="alex_base_link_alex" link2="main_workbench_3" reason="Adjacent"/>
+    <disable_collisions link1="alex_base_link_alex" link2="main_workbench_4" reason="Adjacent"/>
+    <disable_collisions link1="alex_base_link_alex" link2="rack_link_1" reason="Adjacent"/>
+    <disable_collisions link1="alex_base_link_alex" link2="rack_link_2" reason="Adjacent"/>
+    <disable_collisions link1="alex_base_link_alex" link2="rack_link_3" reason="Adjacent"/>
     <disable_collisions link1="alex_base_link_alex" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
     <disable_collisions link1="alex_base_link_alex" link2="yuzi_arm_link_2_yuzi" reason="Never"/>
     <disable_collisions link1="alex_base_link_alex" link2="yuzi_arm_link_3_yuzi" reason="Never"/>
@@ -177,15 +198,19 @@
     <disable_collisions link1="alex_eef_link_alex" link2="centrifuge_1" reason="Never"/>
     <disable_collisions link1="alex_eef_link_alex" link2="centrifuge_link_1" reason="Never"/>
     <disable_collisions link1="alex_eef_link_alex" link2="main_workbench_2" reason="Never"/>
+    <disable_collisions link1="alex_eef_link_alex" link2="rack_link_1" reason="Never"/>
     <disable_collisions link1="centrifuge_1" link2="centrifuge_2" reason="Adjacent"/>
     <disable_collisions link1="centrifuge_1" link2="centrifuge_link_1" reason="Adjacent"/>
     <disable_collisions link1="centrifuge_1" link2="centrifuge_link_2" reason="Adjacent"/>
     <disable_collisions link1="centrifuge_1" link2="coco_arm_link_1_coco" reason="Never"/>
-    <disable_collisions link1="centrifuge_1" link2="coco_arm_link_2_coco" reason="Never"/>
     <disable_collisions link1="centrifuge_1" link2="coco_base_link_coco" reason="Adjacent"/>
     <disable_collisions link1="centrifuge_1" link2="main_workbench" reason="Adjacent"/>
     <disable_collisions link1="centrifuge_1" link2="main_workbench_2" reason="Adjacent"/>
     <disable_collisions link1="centrifuge_1" link2="main_workbench_3" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_1" link2="main_workbench_4" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_1" link2="rack_link_1" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_1" link2="rack_link_2" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_1" link2="rack_link_3" reason="Adjacent"/>
     <disable_collisions link1="centrifuge_1" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
     <disable_collisions link1="centrifuge_1" link2="yuzi_arm_link_2_yuzi" reason="Never"/>
     <disable_collisions link1="centrifuge_1" link2="yuzi_arm_link_3_yuzi" reason="Never"/>
@@ -193,11 +218,14 @@
     <disable_collisions link1="centrifuge_2" link2="centrifuge_link_1" reason="Adjacent"/>
     <disable_collisions link1="centrifuge_2" link2="centrifuge_link_2" reason="Adjacent"/>
     <disable_collisions link1="centrifuge_2" link2="coco_arm_link_1_coco" reason="Never"/>
-    <disable_collisions link1="centrifuge_2" link2="coco_arm_link_2_coco" reason="Never"/>
     <disable_collisions link1="centrifuge_2" link2="coco_base_link_coco" reason="Adjacent"/>
     <disable_collisions link1="centrifuge_2" link2="main_workbench" reason="Adjacent"/>
     <disable_collisions link1="centrifuge_2" link2="main_workbench_2" reason="Adjacent"/>
     <disable_collisions link1="centrifuge_2" link2="main_workbench_3" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_2" link2="main_workbench_4" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_2" link2="rack_link_1" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_2" link2="rack_link_2" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_2" link2="rack_link_3" reason="Adjacent"/>
     <disable_collisions link1="centrifuge_2" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
     <disable_collisions link1="centrifuge_2" link2="yuzi_arm_link_2_yuzi" reason="Never"/>
     <disable_collisions link1="centrifuge_2" link2="yuzi_arm_link_3_yuzi" reason="Never"/>
@@ -213,6 +241,10 @@
     <disable_collisions link1="centrifuge_link_1" link2="main_workbench" reason="Adjacent"/>
     <disable_collisions link1="centrifuge_link_1" link2="main_workbench_2" reason="Adjacent"/>
     <disable_collisions link1="centrifuge_link_1" link2="main_workbench_3" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_link_1" link2="main_workbench_4" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_link_1" link2="rack_link_1" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_link_1" link2="rack_link_2" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_link_1" link2="rack_link_3" reason="Adjacent"/>
     <disable_collisions link1="centrifuge_link_1" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
     <disable_collisions link1="centrifuge_link_1" link2="yuzi_arm_link_2_yuzi" reason="Never"/>
     <disable_collisions link1="centrifuge_link_1" link2="yuzi_arm_link_3_yuzi" reason="Never"/>
@@ -223,6 +255,10 @@
     <disable_collisions link1="centrifuge_link_2" link2="main_workbench" reason="Adjacent"/>
     <disable_collisions link1="centrifuge_link_2" link2="main_workbench_2" reason="Adjacent"/>
     <disable_collisions link1="centrifuge_link_2" link2="main_workbench_3" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_link_2" link2="main_workbench_4" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_link_2" link2="rack_link_1" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_link_2" link2="rack_link_2" reason="Adjacent"/>
+    <disable_collisions link1="centrifuge_link_2" link2="rack_link_3" reason="Adjacent"/>
     <disable_collisions link1="centrifuge_link_2" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
     <disable_collisions link1="centrifuge_link_2" link2="yuzi_arm_link_2_yuzi" reason="Never"/>
     <disable_collisions link1="centrifuge_link_2" link2="yuzi_arm_link_3_yuzi" reason="Never"/>
@@ -236,6 +272,10 @@
     <disable_collisions link1="coco_arm_link_1_coco" link2="main_workbench" reason="Never"/>
     <disable_collisions link1="coco_arm_link_1_coco" link2="main_workbench_2" reason="Never"/>
     <disable_collisions link1="coco_arm_link_1_coco" link2="main_workbench_3" reason="Never"/>
+    <disable_collisions link1="coco_arm_link_1_coco" link2="main_workbench_4" reason="Never"/>
+    <disable_collisions link1="coco_arm_link_1_coco" link2="rack_link_1" reason="Never"/>
+    <disable_collisions link1="coco_arm_link_1_coco" link2="rack_link_2" reason="Never"/>
+    <disable_collisions link1="coco_arm_link_1_coco" link2="rack_link_3" reason="Never"/>
     <disable_collisions link1="coco_arm_link_1_coco" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
     <disable_collisions link1="coco_arm_link_1_coco" link2="yuzi_arm_link_2_yuzi" reason="Never"/>
     <disable_collisions link1="coco_arm_link_1_coco" link2="yuzi_arm_link_3_yuzi" reason="Never"/>
@@ -243,6 +283,8 @@
     <disable_collisions link1="coco_arm_link_2_coco" link2="coco_arm_link_3_coco" reason="Adjacent"/>
     <disable_collisions link1="coco_arm_link_2_coco" link2="main_workbench_2" reason="Never"/>
     <disable_collisions link1="coco_arm_link_2_coco" link2="main_workbench_3" reason="Never"/>
+    <disable_collisions link1="coco_arm_link_2_coco" link2="rack_link_1" reason="Never"/>
+    <disable_collisions link1="coco_arm_link_2_coco" link2="rack_link_2" reason="Never"/>
     <disable_collisions link1="coco_arm_link_2_coco" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
     <disable_collisions link1="coco_arm_link_2_coco" link2="yuzi_base_link_yuzi" reason="Never"/>
     <disable_collisions link1="coco_arm_link_3_coco" link2="coco_arm_link_4_coco" reason="Adjacent"/>
@@ -252,21 +294,33 @@
     <disable_collisions link1="coco_arm_link_3_coco" link2="coco_eef_link_2_coco" reason="Never"/>
     <disable_collisions link1="coco_arm_link_3_coco" link2="main_workbench_2" reason="Never"/>
     <disable_collisions link1="coco_arm_link_3_coco" link2="main_workbench_3" reason="Never"/>
+    <disable_collisions link1="coco_arm_link_3_coco" link2="rack_link_1" reason="Never"/>
+    <disable_collisions link1="coco_arm_link_3_coco" link2="rack_link_2" reason="Never"/>
     <disable_collisions link1="coco_arm_link_4_coco" link2="coco_arm_link_5_coco" reason="Adjacent"/>
     <disable_collisions link1="coco_arm_link_4_coco" link2="main_workbench_2" reason="Never"/>
     <disable_collisions link1="coco_arm_link_4_coco" link2="main_workbench_3" reason="Never"/>
+    <disable_collisions link1="coco_arm_link_4_coco" link2="rack_link_1" reason="Never"/>
+    <disable_collisions link1="coco_arm_link_4_coco" link2="rack_link_2" reason="Never"/>
     <disable_collisions link1="coco_arm_link_5_coco" link2="coco_arm_link_6_coco" reason="Adjacent"/>
     <disable_collisions link1="coco_arm_link_5_coco" link2="coco_eef_link_1_coco" reason="Never"/>
     <disable_collisions link1="coco_arm_link_5_coco" link2="coco_eef_link_2_coco" reason="Never"/>
     <disable_collisions link1="coco_arm_link_5_coco" link2="main_workbench_2" reason="Never"/>
     <disable_collisions link1="coco_arm_link_5_coco" link2="main_workbench_3" reason="Never"/>
+    <disable_collisions link1="coco_arm_link_5_coco" link2="rack_link_1" reason="Never"/>
+    <disable_collisions link1="coco_arm_link_5_coco" link2="rack_link_2" reason="Never"/>
     <disable_collisions link1="coco_arm_link_6_coco" link2="coco_eef_link_1_coco" reason="Adjacent"/>
     <disable_collisions link1="coco_arm_link_6_coco" link2="coco_eef_link_2_coco" reason="Adjacent"/>
     <disable_collisions link1="coco_arm_link_6_coco" link2="main_workbench_2" reason="Never"/>
     <disable_collisions link1="coco_arm_link_6_coco" link2="main_workbench_3" reason="Never"/>
+    <disable_collisions link1="coco_arm_link_6_coco" link2="rack_link_1" reason="Never"/>
+    <disable_collisions link1="coco_arm_link_6_coco" link2="rack_link_2" reason="Never"/>
     <disable_collisions link1="coco_base_link_coco" link2="main_workbench" reason="Adjacent"/>
     <disable_collisions link1="coco_base_link_coco" link2="main_workbench_2" reason="Adjacent"/>
     <disable_collisions link1="coco_base_link_coco" link2="main_workbench_3" reason="Adjacent"/>
+    <disable_collisions link1="coco_base_link_coco" link2="main_workbench_4" reason="Adjacent"/>
+    <disable_collisions link1="coco_base_link_coco" link2="rack_link_1" reason="Adjacent"/>
+    <disable_collisions link1="coco_base_link_coco" link2="rack_link_2" reason="Adjacent"/>
+    <disable_collisions link1="coco_base_link_coco" link2="rack_link_3" reason="Adjacent"/>
     <disable_collisions link1="coco_base_link_coco" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
     <disable_collisions link1="coco_base_link_coco" link2="yuzi_arm_link_2_yuzi" reason="Never"/>
     <disable_collisions link1="coco_base_link_coco" link2="yuzi_arm_link_3_yuzi" reason="Never"/>
@@ -274,17 +328,33 @@
     <disable_collisions link1="coco_eef_link_1_coco" link2="coco_eef_link_2_coco" reason="Never"/>
     <disable_collisions link1="coco_eef_link_1_coco" link2="main_workbench_2" reason="Never"/>
     <disable_collisions link1="coco_eef_link_1_coco" link2="main_workbench_3" reason="Never"/>
+    <disable_collisions link1="coco_eef_link_1_coco" link2="rack_link_1" reason="Never"/>
+    <disable_collisions link1="coco_eef_link_1_coco" link2="rack_link_2" reason="Never"/>
     <disable_collisions link1="coco_eef_link_2_coco" link2="main_workbench_2" reason="Never"/>
     <disable_collisions link1="coco_eef_link_2_coco" link2="main_workbench_3" reason="Never"/>
+    <disable_collisions link1="coco_eef_link_2_coco" link2="rack_link_1" reason="Never"/>
+    <disable_collisions link1="coco_eef_link_2_coco" link2="rack_link_2" reason="Never"/>
     <disable_collisions link1="main_workbench" link2="main_workbench_2" reason="Adjacent"/>
     <disable_collisions link1="main_workbench" link2="main_workbench_3" reason="Adjacent"/>
+    <disable_collisions link1="main_workbench" link2="main_workbench_4" reason="Adjacent"/>
+    <disable_collisions link1="main_workbench" link2="rack_link_1" reason="Adjacent"/>
+    <disable_collisions link1="main_workbench" link2="rack_link_2" reason="Adjacent"/>
+    <disable_collisions link1="main_workbench" link2="rack_link_3" reason="Adjacent"/>
     <disable_collisions link1="main_workbench" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
     <disable_collisions link1="main_workbench" link2="yuzi_arm_link_2_yuzi" reason="Never"/>
     <disable_collisions link1="main_workbench" link2="yuzi_arm_link_3_yuzi" reason="Never"/>
     <disable_collisions link1="main_workbench" link2="yuzi_base_link_yuzi" reason="Adjacent"/>
     <disable_collisions link1="main_workbench_2" link2="main_workbench_3" reason="Adjacent"/>
+    <disable_collisions link1="main_workbench_2" link2="main_workbench_4" reason="Adjacent"/>
+    <disable_collisions link1="main_workbench_2" link2="rack_link_1" reason="Adjacent"/>
+    <disable_collisions link1="main_workbench_2" link2="rack_link_2" reason="Adjacent"/>
+    <disable_collisions link1="main_workbench_2" link2="rack_link_3" reason="Adjacent"/>
     <disable_collisions link1="main_workbench_2" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
     <disable_collisions link1="main_workbench_2" link2="yuzi_base_link_yuzi" reason="Adjacent"/>
+    <disable_collisions link1="main_workbench_3" link2="main_workbench_4" reason="Adjacent"/>
+    <disable_collisions link1="main_workbench_3" link2="rack_link_1" reason="Adjacent"/>
+    <disable_collisions link1="main_workbench_3" link2="rack_link_2" reason="Adjacent"/>
+    <disable_collisions link1="main_workbench_3" link2="rack_link_3" reason="Adjacent"/>
     <disable_collisions link1="main_workbench_3" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
     <disable_collisions link1="main_workbench_3" link2="yuzi_arm_link_2_yuzi" reason="Never"/>
     <disable_collisions link1="main_workbench_3" link2="yuzi_arm_link_3_yuzi" reason="Never"/>
@@ -293,6 +363,40 @@
     <disable_collisions link1="main_workbench_3" link2="yuzi_arm_link_6_yuzi" reason="Never"/>
     <disable_collisions link1="main_workbench_3" link2="yuzi_base_link_yuzi" reason="Adjacent"/>
     <disable_collisions link1="main_workbench_3" link2="yuzi_eef_link_yuzi" reason="Never"/>
+    <disable_collisions link1="main_workbench_4" link2="rack_link_1" reason="Adjacent"/>
+    <disable_collisions link1="main_workbench_4" link2="rack_link_2" reason="Adjacent"/>
+    <disable_collisions link1="main_workbench_4" link2="rack_link_3" reason="Adjacent"/>
+    <disable_collisions link1="main_workbench_4" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
+    <disable_collisions link1="main_workbench_4" link2="yuzi_arm_link_2_yuzi" reason="Never"/>
+    <disable_collisions link1="main_workbench_4" link2="yuzi_arm_link_3_yuzi" reason="Never"/>
+    <disable_collisions link1="main_workbench_4" link2="yuzi_arm_link_4_yuzi" reason="Never"/>
+    <disable_collisions link1="main_workbench_4" link2="yuzi_arm_link_5_yuzi" reason="Never"/>
+    <disable_collisions link1="main_workbench_4" link2="yuzi_arm_link_6_yuzi" reason="Never"/>
+    <disable_collisions link1="main_workbench_4" link2="yuzi_base_link_yuzi" reason="Adjacent"/>
+    <disable_collisions link1="main_workbench_4" link2="yuzi_eef_link_yuzi" reason="Never"/>
+    <disable_collisions link1="rack_link_1" link2="rack_link_2" reason="Adjacent"/>
+    <disable_collisions link1="rack_link_1" link2="rack_link_3" reason="Adjacent"/>
+    <disable_collisions link1="rack_link_1" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
+    <disable_collisions link1="rack_link_1" link2="yuzi_arm_link_2_yuzi" reason="Never"/>
+    <disable_collisions link1="rack_link_1" link2="yuzi_arm_link_3_yuzi" reason="Never"/>
+    <disable_collisions link1="rack_link_1" link2="yuzi_base_link_yuzi" reason="Adjacent"/>
+    <disable_collisions link1="rack_link_2" link2="rack_link_3" reason="Adjacent"/>
+    <disable_collisions link1="rack_link_2" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
+    <disable_collisions link1="rack_link_2" link2="yuzi_arm_link_2_yuzi" reason="Never"/>
+    <disable_collisions link1="rack_link_2" link2="yuzi_arm_link_3_yuzi" reason="Never"/>
+    <disable_collisions link1="rack_link_2" link2="yuzi_arm_link_4_yuzi" reason="Never"/>
+    <disable_collisions link1="rack_link_2" link2="yuzi_arm_link_5_yuzi" reason="Never"/>
+    <disable_collisions link1="rack_link_2" link2="yuzi_arm_link_6_yuzi" reason="Never"/>
+    <disable_collisions link1="rack_link_2" link2="yuzi_base_link_yuzi" reason="Adjacent"/>
+    <disable_collisions link1="rack_link_2" link2="yuzi_eef_link_yuzi" reason="Never"/>
+    <disable_collisions link1="rack_link_3" link2="yuzi_arm_link_1_yuzi" reason="Never"/>
+    <disable_collisions link1="rack_link_3" link2="yuzi_arm_link_2_yuzi" reason="Never"/>
+    <disable_collisions link1="rack_link_3" link2="yuzi_arm_link_3_yuzi" reason="Never"/>
+    <disable_collisions link1="rack_link_3" link2="yuzi_arm_link_4_yuzi" reason="Never"/>
+    <disable_collisions link1="rack_link_3" link2="yuzi_arm_link_5_yuzi" reason="Never"/>
+    <disable_collisions link1="rack_link_3" link2="yuzi_arm_link_6_yuzi" reason="Never"/>
+    <disable_collisions link1="rack_link_3" link2="yuzi_base_link_yuzi" reason="Adjacent"/>
+    <disable_collisions link1="rack_link_3" link2="yuzi_eef_link_yuzi" reason="Never"/>
     <disable_collisions link1="yuzi_arm_link_1_yuzi" link2="yuzi_arm_link_2_yuzi" reason="Adjacent"/>
     <disable_collisions link1="yuzi_arm_link_1_yuzi" link2="yuzi_arm_link_3_yuzi" reason="Never"/>
     <disable_collisions link1="yuzi_arm_link_1_yuzi" link2="yuzi_base_link_yuzi" reason="Adjacent"/>

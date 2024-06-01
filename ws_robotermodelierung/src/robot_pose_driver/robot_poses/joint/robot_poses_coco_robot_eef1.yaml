@@ -1,0 +1,35 @@
+position_1:
+    pose_name: "phil_yuzi"
+    joints: [-0.455, 0.152, -0.032, -1.512, 1.120, -3.008]
+
+position_2:
+    pose_name: "home"
+    joints: [-1.571, -0.000, -0.000, 0.000, 0.000, -1.571]
+
+position_3:
+    pose_name: "phil_alex"
+    joints: [-2.575, 0.210, -0.213, 1.573, 1.004, 0.003]
+
+position_4:
+    pose_name: "pick_right"
+    joints: [0.204, -0.172, -0.327, 0.005, 1.222, -1.833]
+
+position_5:
+    pose_name: "up_right"
+    joints: [0.203, -0.196, -0.043, 0.004, 1.480, -1.833]
+
+position_6:
+    pose_name: "pick_left"
+    joints: [2.979, -0.185, -0.318, 0.009, 1.225, -1.391]
+
+position_7:
+    pose_name: "up_left"
+    joints: [2.976, -0.253, 0.138, 0.008, 1.614, -1.392]
+
+position_8:
+    pose_name: "place"
+    joints: [1.361, 0.043, -0.672, -0.009, 0.901, 0.266]
+
+position_9:
+    pose_name: "place_up"
+    joints: [1.363, 0.115, -0.484, -0.008, 1.160, 0.267]

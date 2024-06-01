@@ -1,0 +1,78 @@
+position_1:
+    pose_name: "home"
+    pose:
+        position:
+            x: -1.995
+            y: 0.007
+            z: 1.414
+        orientation:
+            x: 0.501
+            y: -0.499
+            z: -0.501
+            w: 0.499
+
+position_2:
+    pose_name: "pick"
+    pose:
+        position:
+            x: -1.602
+            y: -0.616
+            z: 0.915
+        orientation:
+            x: 0.501
+            y: -0.499
+            z: -0.501
+            w: 0.499
+
+position_3:
+    pose_name: "up"
+    pose:
+        position:
+            x: -1.602
+            y: -0.617
+            z: 1.374
+        orientation:
+            x: 0.501
+            y: -0.499
+            z: -0.501
+            w: 0.499
+
+position_4:
+    pose_name: "phil"
+    pose:
+        position:
+            x: -0.882
+            y: 0.149
+            z: 1.241
+        orientation:
+            x: 0.145
+            y: 0.691
+            z: 0.693
+            w: 0.144
+
+position_5:
+    pose_name: "place"
+    pose:
+        position:
+            x: -1.217
+            y: 0.852
+            z: 1.076
+        orientation:
+            x: 0.071
+            y: -0.755
+            z: -0.642
+            w: 0.110
+
+position_6:
+    pose_name: "up"
+    pose:
+        position:
+            x: -1.206
+            y: 0.906
+            z: 1.396
+        orientation:
+            x: 0.071
+            y: -0.755
+            z: -0.642
+            w: 0.110
+

@@ -1,0 +1,24 @@
+position_1:
+    pose_name: "home"
+    joints: [0.000, 0.000, -0.000, -0.003, -0.000, -0.000]
+
+position_2:
+    pose_name: "pick"
+    joints: [0.844, -0.044, 0.681, 1.084, -1.008, -0.793]
+
+position_3:
+    pose_name: "up"
+    joints: [0.845, -0.175, 0.211, 1.539, -0.845, -1.525]
+
+position_4:
+    pose_name: "phil"
+    joints: [-2.266, -1.296, 0.846, 0.593, 0.524, -0.526]
+
+position_5:
+    pose_name: "down"
+    joints: [-1.313, -0.137, 0.543, -0.025, -0.254, 0.100]
+
+position_6:
+    pose_name: "place"
+    joints: [-1.341, -0.095, 0.105, -2.909, -0.146, 2.982]
+
