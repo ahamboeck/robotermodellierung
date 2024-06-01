@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robot_alex_urdf">
+  <link
+    name="base_link_alex">
+    <inertial>
+      <origin
+        xyz="-0.0593086948871401 -2.87595368940353E-12 0.0776653157730273"
+        rpy="0 0 0" />
+      <mass
+        value="33.891578448587" />
+      <inertia
+        ixx="0.562042604088221"
+        ixy="-9.14376513234781E-12"
+        ixz="0.00403961419511076"
+        iyy="0.970694427805804"
+        iyz="-7.30601703212629E-12"
+        izz="1.29713482615658" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_alex_urdf/meshes/base_link_alex.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.152941176470588 0 0.117647058823529 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_alex_urdf/meshes/base_link_alex.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="arm_link_1_alex">
+    <inertial>
+      <origin
+        xyz="0.0416589398280025 -3.68988089329482E-05 0.19712083516126"
+        rpy="0 0 0" />
+      <mass
+        value="26.7048266497369" />
+      <inertia
+        ixx="0.495499615132855"
+        ixy="-0.0102760504758245"
+        ixz="-0.0600935399650256"
+        iyy="0.766768677077223"
+        iyz="-0.0115358881770517"
+        izz="0.604967931690783" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_alex_urdf/meshes/arm_link_1_alex.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_alex_urdf/meshes/arm_link_1_alex.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_joint_1_alex"
+    type="continuous">
+    <origin
+      xyz="0 0 0.234"
+      rpy="0 0 1.5707963267949" />
+    <parent
+      link="base_link_alex" />
+    <child
+      link="arm_link_1_alex" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm_link_2_alex">
+    <inertial>
+      <origin
+        xyz="-0.290203503422468 0.000258724363916885 0.0707589768311214"
+        rpy="0 0 0" />
+      <mass
+        value="14.3270690802686" />
+      <inertia
+        ixx="0.0504590836189902"
+        ixy="4.64678003355E-05"
+        ixz="0.0137202067906074"
+        iyy="0.848873613210201"
+        iyz="-0.000175299197197563"
+        izz="0.87480377814942" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_alex_urdf/meshes/arm_link_2_alex.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_alex_urdf/meshes/arm_link_2_alex.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_joint_2_alex"
+    type="continuous">
+    <origin
+      xyz="0.15 -0.1375 0.265"
+      rpy="1.5708 1.5708 0" />
+    <parent
+      link="arm_link_1_alex" />
+    <child
+      link="arm_link_2_alex" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm_link_3_alex">
+    <inertial>
+      <origin
+        xyz="-0.0664637155357433 -0.0362614171159604 0.163132908024542"
+        rpy="0 0 0" />
+      <mass
+        value="27.1450417424437" />
+      <inertia
+        ixx="0.420912669748457"
+        ixy="-0.0211648441841246"
+        ixz="0.00675660536457733"
+        iyy="0.344868303293537"
+        iyz="-0.00338242702861562"
+        izz="0.473964503565445" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_alex_urdf/meshes/arm_link_3_alex.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_alex_urdf/meshes/arm_link_3_alex.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_joint_3_alex"
+    type="continuous">
+    <origin
+      xyz="-0.7 0 0.02"
+      rpy="3.1416 0 0" />
+    <parent
+      link="arm_link_2_alex" />
+    <child
+      link="arm_link_3_alex" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm_link_4_alex">
+    <inertial>
+      <origin
+        xyz="9.61729624561133E-07 -4.81067613522512E-07 0.316053837217416"
+        rpy="0 0 0" />
+      <mass
+        value="9.30858027519613" />
+      <inertia
+        ixx="0.257239180922131"
+        ixy="0.000166705964847101"
+        ixz="-7.65826560298902E-07"
+        iyy="0.264212206266023"
+        iyz="-3.49084067182479E-07"
+        izz="0.0348463133234511" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_alex_urdf/meshes/arm_link_4_alex.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_alex_urdf/meshes/arm_link_4_alex.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_joint_4_alex"
+    type="continuous">
+    <origin
+      xyz="-0.115 -0.29 0.15"
+      rpy="1.5708 1.5708 0" />
+    <parent
+      link="arm_link_3_alex" />
+    <child
+      link="arm_link_4_alex" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm_link_5_alex">
+    <inertial>
+      <origin
+        xyz="-7.93515475550066E-10 -0.00224018993807729 4.63650872903343E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.961734748124672" />
+      <inertia
+        ixx="0.00143991315628678"
+        ixy="8.85889010861654E-10"
+        ixz="-9.91727417582073E-10"
+        iyy="0.00154678090917305"
+        iyz="-1.41969827872465E-11"
+        izz="0.00165625576362529" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_alex_urdf/meshes/arm_link_5_alex.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_alex_urdf/meshes/arm_link_5_alex.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_joint_5_alex"
+    type="continuous">
+    <origin
+      xyz="0 0 0.51"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="arm_link_4_alex" />
+    <child
+      link="arm_link_5_alex" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm_link_6_alex">
+    <inertial>
+      <origin
+        xyz="2.47238265416172E-08 2.0518350976606E-09 0.0527259633442779"
+        rpy="0 0 0" />
+      <mass
+        value="0.288779624800079" />
+      <inertia
+        ixx="0.000386925186804296"
+        ixy="-2.51402341666326E-12"
+        ixz="-3.11942189521198E-13"
+        iyy="0.000386925215104184"
+        iyz="-2.74314870515978E-14"
+        izz="0.000212753902483571" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_alex_urdf/meshes/arm_link_6_alex.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_alex_urdf/meshes/arm_link_6_alex.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_joint_6_alex"
+    type="continuous">
+    <origin
+      xyz="0 0.045 0"
+      rpy="1.5708 -0.041313 3.1416" />
+    <parent
+      link="arm_link_5_alex" />
+    <child
+      link="arm_link_6_alex" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="eef_link_alex">
+    <inertial>
+      <origin
+        xyz="-2.38370087557449E-13 -0.0980561329200587 -2.88657986402541E-15"
+        rpy="0 0 0" />
+      <mass
+        value="1.45406661810263" />
+      <inertia
+        ixx="0.0068133488557799"
+        ixy="7.63401048149524E-14"
+        ixz="-4.74320102714155E-09"
+        iyy="0.00243700011056298"
+        iyz="4.61232655506351E-16"
+        izz="0.00863071846569576" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_alex_urdf/meshes/eef_link_alex.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_alex_urdf/meshes/eef_link_alex.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="eef_joint_fixed_alex"
+    type="fixed">
+    <origin
+      xyz="0 0 0.32173"
+      rpy="1.5708 0 1.5295" />
+    <parent
+      link="arm_link_6_alex" />
+    <child
+      link="eef_link_alex" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

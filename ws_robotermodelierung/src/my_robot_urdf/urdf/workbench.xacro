@@ -12,8 +12,8 @@
                 <geometry>
                     <box size="${workbench_length} ${workbench_width} ${workbench_height}"/>
                 </geometry>
-                <material name="grey">
-                    <color rgba="0.5 0.5 0.5 1"/> <!-- Workbench color -->
+                <material name="rubber_black">
+                    <color rgba="0.05 0.05 0.05 1"/> <!-- Dark grey to mimic black rubber -->
                 </material>
             </visual>
             <collision>

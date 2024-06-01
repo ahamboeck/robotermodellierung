@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robot_coco">
+  <link
+    name="base_link_coco">
+    <inertial>
+      <origin
+        xyz="-0.0764021530191945 2.7134934886552E-05 0.0792317455056668"
+        rpy="0 0 0" />
+      <mass
+        value="33.7641312353281" />
+      <inertia
+        ixx="0.388653917501998"
+        ixy="4.13251669969691E-18"
+        ixz="6.82570301647603E-05"
+        iyy="0.347678993710906"
+        iyz="9.1636908185897E-18"
+        izz="0.646698533818771" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_coco/meshes/base_link_coco.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_urdf/meshes/base_link_coco.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="arm_link_1_coco">
+    <inertial>
+      <origin
+        xyz="-0.0310954578647586 0.00332496023117711 0.134341853376388"
+        rpy="0 0 0" />
+      <mass
+        value="28.7973325809481" />
+      <inertia
+        ixx="0.316024916828851"
+        ixy="-0.000189061034524889"
+        ixz="0.0129236801369765"
+        iyy="0.322997369549128"
+        iyz="0.000316914959622083"
+        izz="0.500692862333896" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_urdf/meshes/arm_link_1_coco.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_urdf/meshes/arm_link_1_coco.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_link_1_coco"
+    type="revolute">
+    <origin
+      xyz="0 0 0.18"
+      rpy="0 0 0" />
+    <parent
+      link="base_link_coco" />
+    <child
+      link="arm_link_1_coco" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm_link_2_coco">
+    <inertial>
+      <origin
+        xyz="-0.000939286588189411 0.316348210123725 0.119016776091287"
+        rpy="0 0 0" />
+      <mass
+        value="29.9902849835083" />
+      <inertia
+        ixx="2.04087599375797"
+        ixy="2.71567837661912E-12"
+        ixz="6.90866563725407E-18"
+        iyy="0.14290036636914"
+        iyz="7.40531967035574E-16"
+        izz="2.11684381896841" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_urdf/meshes/arm_link_2_coco.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_urdf/meshes/arm_link_2_coco.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_link_2_coco"
+    type="revolute">
+    <origin
+      xyz="-0.14579 0.090292 0.33595"
+      rpy="1.5708 0.12064 -3.1416" />
+    <parent
+      link="arm_link_1_coco" />
+    <child
+      link="arm_link_2_coco" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm_link_3_coco">
+    <inertial>
+      <origin
+        xyz="0.112633238505252 -0.0799322649464853 0.0667859681669811"
+        rpy="0 0 0" />
+      <mass
+        value="16.9402164034933" />
+      <inertia
+        ixx="0.147883770330323"
+        ixy="0.094818491141768"
+        ixz="0.0176568765175328"
+        iyy="0.195654931378514"
+        iyz="-0.0116926814719466"
+        izz="0.274178448217779" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_urdf/meshes/arm_link_3_coco.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_urdf/meshes/arm_link_3_coco.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_link_3_coco"
+    type="revolute">
+    <origin
+      xyz="0.0017779 0.76236 0"
+      rpy="3.1416 0 2.5562" />
+    <parent
+      link="arm_link_2_coco" />
+    <child
+      link="arm_link_3_coco" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm_link_4_coco">
+    <inertial>
+      <origin
+        xyz="0.00566743707878439 0.0432831775720403 0.283218920418927"
+        rpy="0 0 0" />
+      <mass
+        value="7.44374239326319" />
+      <inertia
+        ixx="0.159458719225964"
+        ixy="-2.32546035320198E-05"
+        ixz="0.000318756137369379"
+        iyy="0.170907372375113"
+        iyz="0.00563574921699865"
+        izz="0.0394445449966552" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_urdf/meshes/arm_link_4_coco.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_urdf/meshes/arm_link_4_coco.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_link_4_coco"
+    type="revolute">
+    <origin
+      xyz="0.25011 -0.19918 0.073652"
+      rpy="0 1.5708 0" />
+    <parent
+      link="arm_link_3_coco" />
+    <child
+      link="arm_link_4_coco" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm_link_5_coco">
+    <inertial>
+      <origin
+        xyz="0.0327073579947649 0.000399930122569447 -0.00635056152962845"
+        rpy="0 0 0" />
+      <mass
+        value="1.52714461517355" />
+      <inertia
+        ixx="0.00405781083568541"
+        ixy="-2.52022895116163E-06"
+        ixz="-3.23424295631454E-07"
+        iyy="0.00340193548011777"
+        iyz="-3.63483013490502E-18"
+        izz="0.00209047100682797" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_urdf/meshes/arm_link_5_coco.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_urdf/meshes/arm_link_5_coco.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_link_5_coco"
+    type="revolute">
+    <origin
+      xyz="0 0.0061313 0.60723"
+      rpy="1.5708 -0.32663 -1.5708" />
+    <parent
+      link="arm_link_4_coco" />
+    <child
+      link="arm_link_5_coco" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm_link_6_coco">
+    <inertial>
+      <origin
+        xyz="6.83827994230057E-15 4.91162666094169E-13 0.00209660536067713"
+        rpy="0 0 0" />
+      <mass
+        value="0.0783717856165202" />
+      <inertia
+        ixx="3.89729060157441E-05"
+        ixy="-4.73467751418064E-22"
+        ixz="3.90642805809135E-22"
+        iyy="3.89729060157441E-05"
+        iyz="-1.35525271560672E-20"
+        izz="7.68229526638506E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_urdf/meshes/arm_link_6_coco.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_urdf/meshes/arm_link_6_coco.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_joint_6_coco"
+    type="revolute">
+    <origin
+      xyz="0.088678 -0.00048689 -0.0063488"
+      rpy="0 1.5708 0" />
+    <parent
+      link="arm_link_5_coco" />
+    <child
+      link="arm_link_6_coco" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="eef_link_coco">
+    <inertial>
+      <origin
+        xyz="-0.000160574398918121 1.1733226914501E-05 -0.0505537897313374"
+        rpy="0 0 0" />
+      <mass
+        value="0.0881458860458235" />
+      <inertia
+        ixx="3.41606469042043E-05"
+        ixy="-2.18364282658575E-08"
+        ixz="-1.30675573106947E-07"
+        iyy="3.38633990498516E-05"
+        iyz="9.54819239022332E-09"
+        izz="3.14208395202068E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_urdf/meshes/eef_link_coco.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_urdf/meshes/eef_link_coco.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="eef_joint_fixed_coco"
+    type="fixed">
+    <origin
+      xyz="0 0 0.079322"
+      rpy="0 0 0" />
+    <parent
+      link="arm_link_6_coco" />
+    <child
+      link="eef_link_coco" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
