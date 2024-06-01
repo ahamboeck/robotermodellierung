@@ -1,0 +1,3 @@
+<launch>
+    <node name="hmi" pkg="hmi" type="hmi" output="screen"></node>
+</launch>
