@@ -8,6 +8,7 @@
     <xacro:include filename="$(find my_robot_urdf)/urdf/centrifuge_model.xacro" />
     <xacro:include filename="$(find my_robot_urdf)/urdf/centrifuge.xacro" />
     <xacro:include filename="$(find my_robot_urdf)/urdf/workbench.xacro" />
+    <xacro:include filename="$(find my_robot_urdf)/urdf/rack.xacro" />
     <xacro:include filename="$(find my_robot_urdf)/urdf/arm_coco.xacro" />
     <xacro:include filename="$(find my_robot_urdf)/urdf/arm_yuzi.xacro" />
     <xacro:include filename="$(find my_robot_urdf)/urdf/arm.xacro" />
@@ -36,6 +37,12 @@
     <xacro:property name="workbench_width_3" value="5" />
     <xacro:property name="workbench_name_3" value="main_workbench_3" />
 
+    <!-- Define parameters for workbench 3-->
+    <xacro:property name="workbench_height_4" value="0.75" />
+    <xacro:property name="workbench_length_4" value="1" />
+    <xacro:property name="workbench_width_4" value="1" />
+    <xacro:property name="workbench_name_4" value="main_workbench_4" />
+
     <!-- Define parameters for centrifuge 1-->
     <xacro:property name="centrifuge_length_1" value="0.75" />
     <xacro:property name="centrifuge_diameter_1" value="0.6" />
@@ -53,18 +60,36 @@
     <!-- Define parameters for the centrifuge 2 model-->
     <xacro:property name="centrifuge_model_name_2" value="centrifuge_link_2"/>
     <xacro:property name="centrifuge_2_collada" value="package://my_robot_urdf/models/centrifuge.dae"/>
+    
 
+    <!-- Define parameters for the rack 2-->
+    <xacro:property name="rack_model_name_1" value="rack_link_1"/>
+    <xacro:property name="rack_model_name_1_stl" value="package://my_robot_urdf/models/rack.stl"/>
+
+    <!-- Define parameters for the rack 2-->
+    <xacro:property name="rack_model_name_2" value="rack_link_2"/>
+    <xacro:property name="rack_model_name_2_stl" value="package://my_robot_urdf/models/rack.stl"/>
+
+    <!-- Define parameters for the rack 2-->
+    <xacro:property name="rack_model_name_3" value="rack_link_3"/>
+    <xacro:property name="rack_model_name_3_stl" value="package://my_robot_urdf/models/rack.stl"/>
+    
     <!-- Instantiate the workbenches as the root link -->
     <xacro:workbench_ground workbench_name="${workbench_name_1}" workbench_height="${workbench_height_1}" workbench_length="${workbench_length_1}" workbench_width="${workbench_width_1}" />
     <xacro:workbench workbench_name="${workbench_name_2}" workbench_height="${workbench_height_2}" workbench_length="${workbench_length_2}" workbench_width="${workbench_width_2}" />
     <xacro:workbench workbench_name="${workbench_name_3}" workbench_height="${workbench_height_3}" workbench_length="${workbench_length_3}" workbench_width="${workbench_width_3}" />
-
+    <xacro:workbench workbench_name="${workbench_name_4}" workbench_height="${workbench_height_4}" workbench_length="${workbench_length_4}" workbench_width="${workbench_width_4}" />
 
     <!-- Instantiate the centrifuges as the root link -->
     <xacro:centrifuge centrifuge_name="${centrifuge_name_1}" centrifuge_length="${centrifuge_length_1}" centrifuge_diameter="${centrifuge_diameter_1}" />
     <xacro:centrifuge centrifuge_name="${centrifuge_name_2}" centrifuge_length="${centrifuge_length_2}" centrifuge_diameter="${centrifuge_diameter_2}" />
     <xacro:centrifuge_model component_name="${centrifuge_model_name_1}" component_path="${centrifuge_1_collada}"/>
     <xacro:centrifuge_model component_name="${centrifuge_model_name_2}" component_path="${centrifuge_2_collada}"/>
+
+    <!-- Instantiate the racks-->
+    <xacro:rack_model component_name="${rack_model_name_1}" component_path="${rack_model_name_1_stl}" />
+    <xacro:rack_model component_name="${rack_model_name_2}" component_path="${rack_model_name_2_stl}" />
+    <xacro:rack_model component_name="${rack_model_name_3}" component_path="${rack_model_name_3_stl}" />
 
     <!-- Main body link (central base link) -->
     <link name="central_base_link">
@@ -86,6 +111,11 @@
         <parent link="central_base_link"/>
         <child link="${workbench_name_3}"/>
         <origin xyz="-${(workbench_length_3 / 2) + robot_yuzi_distance} -${workbench_width_3 / 2} 0" rpy="0 0 0"/>
+    </joint>
+    <joint name="base_to_workbench_4_joint" type="fixed">
+        <parent link="central_base_link"/>
+        <child link="${workbench_name_4}"/>
+        <origin xyz="0 ${(workbench_length_4 / 2) + 1.5} 0" rpy="0 0 0"/>
     </joint>
 
     <!-- Connect each centrifuge to the central base link with a fixed joint -->
@@ -110,6 +140,25 @@
         <parent link="central_base_link"/>
         <child link="${centrifuge_model_name_2}"/>
         <origin xyz="-${(centrifuge_diameter_2 / 2) + centrifuge_distance_x} ${centrifuge_distance_y} ${(centrifuge_length_2) + centrifuge_offset}" rpy="${PI/2} 0 0"/>
+    </joint>
+
+    <!-- Connect each rack to the central base link with a fixed joint -->
+    <joint name="base_to_rack_1_joint" type="fixed">
+        <parent link="central_base_link"/>
+        <child link="${rack_model_name_1}"/>
+        <origin xyz="${(workbench_length_2 / 2) + robot_yuzi_distance} ${workbench_length_2 - 1.5} ${workbench_height_2}" rpy="${PI/2} 0 -${PI/2}"/>
+    </joint>
+
+    <joint name="base_to_rack_2_joint" type="fixed">
+        <parent link="central_base_link"/>
+        <child link="${rack_model_name_2}"/>
+        <origin xyz="-${(workbench_length_3 / 2) + robot_yuzi_distance} ${workbench_length_3 - 1.5} ${workbench_height_3}" rpy="${PI/2} 0 ${PI/2}"/>
+    </joint>
+
+    <joint name="base_to_rack_3_joint" type="fixed">
+        <parent link="central_base_link"/>
+        <child link="${rack_model_name_3}"/>
+        <origin xyz="0 ${(workbench_length_4 / 2) + 1.5} ${workbench_height_3}" rpy="${PI/2} 0 0"/>
     </joint>
 
     <!-- Instantiate the arms, attaching it to the central base link -->

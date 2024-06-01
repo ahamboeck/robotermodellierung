@@ -1,0 +1,7 @@
+position 1:
+    pose_name: "Home"
+    joints: [0.000, 0.000, 0.000, 0.000, 0.000, 0.000]
+
+position 2:
+    pose_name: "All_1"
+    joints: [0.000, 0.000, 1.000, 1.000, 1.000, 1.000]
