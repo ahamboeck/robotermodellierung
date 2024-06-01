@@ -60,15 +60,17 @@
   </include>
 
   <!-- Run Rviz and load the default config to see the state of the move_group node -->
-  <include file="$(dirname)/moveit_rviz.launch" if="$(arg use_rviz)">
-    <arg name="rviz_config" value="$(dirname)/moveit.rviz" />
-    <arg name="debug" value="$(arg debug)" />
-  </include>
+  <!-- <include file="$(dirname)/moveit_rviz.launch" if="$(arg use_rviz)">
+    <arg name="rviz_config" value="$(dirname)/moveit.rviz"/>
+    <arg name="debug" value="$(arg debug)"/>
+  </include> -->
 
   <!-- If database loading was enabled, start mongodb as well -->
-  <include file="$(dirname)/default_warehouse_db.launch" if="$(arg db)">
-    <arg name="moveit_warehouse_database_path" value="$(arg db_path)" />
-  </include>
+  <!-- <include file="$(dirname)/default_warehouse_db.launch" if="$(arg db)">
+    <arg name="moveit_warehouse_database_path" value="$(arg db_path)"/>
+  </include> -->
+
+  <node name="hmi" pkg="hmi" type="hmi" output="screen"></node>
 
   <!-- Random test mode node -->
   <node name="robot_driver_test" pkg="robot_pose_driver" type="drive_poses.py" args=""
