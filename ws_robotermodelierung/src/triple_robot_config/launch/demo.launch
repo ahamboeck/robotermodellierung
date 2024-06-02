@@ -72,10 +72,10 @@
 
   <node name="hmi" pkg="hmi" type="hmi"></node>
 
-  <!-- Random test mode node -->
-  <!-- <node name="robot_driver_test" pkg="robot_pose_driver" type="drive_poses.py" args=""
+  <!-- Robot driver node -->
+  <node name="robot_driver_test" pkg="robot_pose_driver" type="drive_poses.py" args=""
     output="screen">
     <env name="ROS_LOG_DIR" value="$(find robot_pose_driver)/logs" />
-  </node> -->
+  </node>
 
 </launch>
